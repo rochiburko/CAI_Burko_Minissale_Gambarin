@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{C875A40E-BBF5-4C34-A7D1-E090C9381BAA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SistemaDeMensajeria/Program.cs">
+    <Files>
+      <File FileName="SistemaDeMensajeria/MenuPrincipal.cs" Line="1" Column="1" />
+      <File FileName="SistemaDeMensajeria/Program.cs" Line="7" Column="1" />
+      <File FileName="SistemaDeMensajeria/Usuario.cs" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.SistemaDeMensajeria PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
