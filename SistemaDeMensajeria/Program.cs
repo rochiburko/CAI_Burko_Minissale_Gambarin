@@ -28,7 +28,12 @@ while (!usuarioValido)
 
 Console.WriteLine($"Los datos ingresados son correctos! Bienvenido {nombreUsuario}");
 
-MenuPrincipal.mostrar();
+//Busco el cliente asociado al nombre de usuario ingresado
+Cliente cliente = new Cliente().traerDatosCliente(nombreUsuario);
+Console.WriteLine($"La direccion del cliente es: {cliente.direccion}");
+Console.WriteLine($"Los envios del cliente son: {cliente.idEnvios}");
+
+MenuPrincipal.mostrar(cliente);
 
 
 

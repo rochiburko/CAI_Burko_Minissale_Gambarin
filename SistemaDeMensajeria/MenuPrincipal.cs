@@ -3,7 +3,7 @@ namespace SistemaDeMensajeria
 {
 	public static class MenuPrincipal
 	{
-        public static void mostrar()
+        public static void mostrar(Cliente cliente)
         {
             Console.WriteLine(" ");
             Console.WriteLine("INGRESA UN NUMERO PARA NAVEGAR EN EL MENU");
@@ -21,6 +21,7 @@ namespace SistemaDeMensajeria
             {
                 case 1:
                     Console.WriteLine("Usted selecciono Solicitar servicio");
+                    SolicitudDeServicio solicitud = new SolicitudDeServicio(cliente);
                     break;
                 case 2:
                     Console.WriteLine("Usted selecciono Consultar estado de servicio");
@@ -46,5 +47,6 @@ namespace SistemaDeMensajeria
             return nroIngresado;
         }
     }
+
 }
 
