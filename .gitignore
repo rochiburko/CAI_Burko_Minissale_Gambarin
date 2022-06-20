@@ -8,15 +8,17 @@
 
 # Build results
 
-[Dd]ebug/
-[Rr]elease/
+Debug/
+Release/
 x64/
-[Bb]in/
-[Oo]bj/
+bin/
+obj/
+SistemaDeMensajeria/bin/
+SistemaDeMensajeria/obj/
 
 # MSTest test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
+TestResult*/
+BuildLog.*
 
 *_i.c
 *_p.c
@@ -62,7 +64,7 @@ ipch/
 
 # ReSharper is a .NET coding add-in
 _ReSharper*/
-*.[Rr]e[Ss]harper
+*.ReSharper
 *.DotSettings.user
 
 # Click-Once directory
@@ -90,12 +92,12 @@ AppPackages/
 sql/
 *.Cache
 ClientBin/
-[Ss]tyle[Cc]op.*
-![Ss]tyle[Cc]op.targets
+StyleCop.*
+!StyleCop.targets
 ~$*
 *~
 *.dbmdl
-*.[Pp]ublish.xml
+*.Publish.xml
 
 *.publishsettings
 
