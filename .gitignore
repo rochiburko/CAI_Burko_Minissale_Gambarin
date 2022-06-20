@@ -14,7 +14,7 @@ x64/
 bin/
 obj/
 SistemaDeMensajeria/bin/
-SistemaDeMensajeria/obj/
+SistemaDeMensajeria/obj/*
 
 # MSTest test Results
 TestResult*/
