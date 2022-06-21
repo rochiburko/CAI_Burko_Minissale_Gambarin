@@ -13,8 +13,8 @@ Release/
 x64/
 bin/
 obj/
-SistemaDeMensajeria/bin/
-SistemaDeMensajeria/obj/*
+*/SistemaDeMensajeria/bin/
+*/SistemaDeMensajeria/obj/
 
 # MSTest test Results
 TestResult*/
