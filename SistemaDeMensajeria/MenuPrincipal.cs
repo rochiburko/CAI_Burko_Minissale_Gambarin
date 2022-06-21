@@ -7,8 +7,8 @@ namespace SistemaDeMensajeria
         {
             Console.WriteLine(" ");
             Console.WriteLine("INGRESA UN NUMERO PARA NAVEGAR EN EL MENU");
-            Console.WriteLine("1 - Solicitar servicio");
-            Console.WriteLine("2 - Consultar estado de servicio");
+            Console.WriteLine("1 - Solicitar envio");
+            Console.WriteLine("2 - Consultar estado de envio");
             Console.WriteLine("3 - Salir del programa");
 
             int numeroIngresado;
@@ -20,7 +20,7 @@ namespace SistemaDeMensajeria
             switch (numeroIngresado)
             {
                 case 1:
-                    Console.WriteLine("Usted selecciono Solicitar servicio");
+                    Console.WriteLine("Usted selecciono Solicitar envio. Elija el tipo de envio");
                     SolicitudDeServicio solicitud = new SolicitudDeServicio(cliente);
                     solicitud.cargarDatos();
                     break;
@@ -33,7 +33,6 @@ namespace SistemaDeMensajeria
             }
 
         }
-
         public static int solcitarNumeroEntre(int numero1, int numero2)
         {
             int nroIngresado;

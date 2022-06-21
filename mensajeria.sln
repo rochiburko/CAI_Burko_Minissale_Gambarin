@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "mensajeria", "mensajeria.vbproj", "{FF8746D6-542B-4CF1-9C63-2D6A873BC8F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF8746D6-542B-4CF1-9C63-2D6A873BC8F7}.Debug|x86.ActiveCfg = Debug|x86
+		{FF8746D6-542B-4CF1-9C63-2D6A873BC8F7}.Debug|x86.Build.0 = Debug|x86
+		{FF8746D6-542B-4CF1-9C63-2D6A873BC8F7}.Release|x86.ActiveCfg = Release|x86
+		{FF8746D6-542B-4CF1-9C63-2D6A873BC8F7}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FC25D3C-BC72-4016-8F32-11BF902749F1}
+	EndGlobalSection
+EndGlobal

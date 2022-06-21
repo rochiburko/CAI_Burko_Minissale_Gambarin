@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mariana/Documents/CAI/SistemaDeMensajeria/SistemaDeMensajeria/SistemaDeMensajeria.csproj": {}
+    "C:\\Users\\anminissale\\Desktop\\mensajeria\\CAI_Burko_Minissale_Gambarin\\SistemaDeMensajeria\\SistemaDeMensajeria.csproj": {}
   },
   "projects": {
-    "/Users/mariana/Documents/CAI/SistemaDeMensajeria/SistemaDeMensajeria/SistemaDeMensajeria.csproj": {
+    "C:\\Users\\anminissale\\Desktop\\mensajeria\\CAI_Burko_Minissale_Gambarin\\SistemaDeMensajeria\\SistemaDeMensajeria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mariana/Documents/CAI/SistemaDeMensajeria/SistemaDeMensajeria/SistemaDeMensajeria.csproj",
+        "projectUniqueName": "C:\\Users\\anminissale\\Desktop\\mensajeria\\CAI_Burko_Minissale_Gambarin\\SistemaDeMensajeria\\SistemaDeMensajeria.csproj",
         "projectName": "SistemaDeMensajeria",
-        "projectPath": "/Users/mariana/Documents/CAI/SistemaDeMensajeria/SistemaDeMensajeria/SistemaDeMensajeria.csproj",
-        "packagesPath": "/Users/mariana/.nuget/packages/",
-        "outputPath": "/Users/mariana/Documents/CAI/SistemaDeMensajeria/SistemaDeMensajeria/obj/",
+        "projectPath": "C:\\Users\\anminissale\\Desktop\\mensajeria\\CAI_Burko_Minissale_Gambarin\\SistemaDeMensajeria\\SistemaDeMensajeria.csproj",
+        "packagesPath": "C:\\Users\\anminissale\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anminissale\\Desktop\\mensajeria\\CAI_Burko_Minissale_Gambarin\\SistemaDeMensajeria\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mariana/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\anminissale\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

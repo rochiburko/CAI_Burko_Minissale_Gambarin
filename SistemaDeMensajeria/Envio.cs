@@ -8,6 +8,7 @@
         public Sucursal sucursalOrigen { get; set; }
         public string direccionDestino { get; set; }
         private string archivoDatosSucursales = "../../datos/envios.txt";
+       
         
         public Envio()
         {
@@ -35,5 +36,49 @@
 
             return numeroSeguimiento + 1;
         }
+
+        public static void elegirTipoEnvio()
+        {
+            Console.WriteLine(" ");
+            Console.WriteLine("INGRESE EL NUMERO DEL TIPO DE ENVIO");
+            Console.WriteLine("1 - Encomienda");
+            Console.WriteLine("2 - correspondencia");
+            Console.WriteLine("3 - Salir del programa");
+
+            int numeroIngresado;
+
+            numeroIngresado = solcitarNumeroEntre(0, 3);
+
+            Console.Clear();
+
+            switch (numeroIngresado)
+            {
+                case 1:
+                    Console.WriteLine("Usted selecciono Solicitar envio. Elija el tipo de envio");
+                    break;
+                case 2:
+                    Console.WriteLine("Usted selecciono Consultar estado de envio");
+                    break;
+                case 3:
+                    Console.WriteLine("Saliendo del programa");
+                    break;
+            }
+
+        }
+
+        public static int solcitarNumeroEntre(int numero1, int numero2)
+        {
+            int nroIngresado;
+            Boolean esNroEntero;
+
+            do
+            {
+                esNroEntero = int.TryParse(Console.ReadLine(), out nroIngresado);
+            }
+            while (nroIngresado < numero1 || nroIngresado > numero2 || esNroEntero == false);
+
+            return nroIngresado;
+        }
+     
     }
 }

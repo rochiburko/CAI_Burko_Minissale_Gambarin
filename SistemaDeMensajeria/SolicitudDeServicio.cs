@@ -19,12 +19,51 @@ namespace SistemaDeMensajeria
         public void cargarDatos()
         {
 
-            Console.WriteLine("Desea que pasemos a retirar el paquete por su domicilio? SI | NO");
-            this.seDebePasarARetirar = validarInputSiNO();
+            /*  Console.WriteLine("Encomienda SI | NO");
+              this.seDebePasarARetirar = validarInputSiNO();
 
-            Console.WriteLine("El paquete sera retirado por una sucursal? SI | NO");
-            this.seRetiraPorSucursal = validarInputSiNO();
+              Console.WriteLine("Correspondencia SI | NO");
+              this.seRetiraPorSucursal = validarInputSiNO();*/
+           
+                Console.WriteLine(" ");
+                Console.WriteLine("INGRESE EL NUMERO DEL TIPO DE ENVIO");
+                Console.WriteLine("1 - Encomienda");
+                Console.WriteLine("2 - correspondencia");
+                Console.WriteLine("3 - Salir del programa");
 
+                int numeroIngresado;
+
+                numeroIngresado = solcitarNumeroEntre(0, 3);
+
+                Console.Clear();
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        Console.WriteLine("Usted selecciono Solicitar envio. Elija el tipo de envio");
+
+                        break;
+                    case 2:
+                        Console.WriteLine("Usted selecciono Consultar estado de servicio");
+                        break;
+                    case 3:
+                        Console.WriteLine("Saliendo del programa");
+                        break;
+                }
+        }
+
+        public static int solcitarNumeroEntre(int numero1, int numero2)
+        {
+            int nroIngresado;
+            Boolean esNroEntero;
+
+            do
+            {
+                esNroEntero = int.TryParse(Console.ReadLine(), out nroIngresado);
+            }
+            while (nroIngresado < numero1 || nroIngresado > numero2 || esNroEntero == false);
+
+            return nroIngresado;
         }
 
         public bool validarInputSiNO()
