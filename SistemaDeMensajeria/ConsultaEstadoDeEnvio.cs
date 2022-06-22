@@ -24,25 +24,22 @@ namespace SistemaDeMensajeria
         public void mostrarEstado()
         {
 
-            Console.WriteLine("Por favor, ingrese el número de seguimiento del envio");
+            Console.WriteLine("Por favor, ingrese el número de seguimiento del envio:");
             string estadoEnvio = Console.ReadLine();
-            // bool estadoDeEnvio = true;
-            /* var stream = File.OpenRead(estadoEnvios);
-             var reader = new StreamReader(stream);
+            Console.Clear();
 
-             if (numeroSeguimiento != 123456)
+             if (estadoEnvio == "1234")
              {
-                 Console.ForegroundColor = ConsoleColor.Red;
-                 Console.WriteLine("No se pudo encontrar dicha solicitud de envio");
-
-             }
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Su envio se encuentra listo  para retirar en sucursarl");
+              
+            }
              else
              {
-                 Console.WriteLine("El estado es: Lista para retirar en sucursarl");
-
-             }*/
-
-            // return estadoDeEnvio;
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(" Número de seguimiento invalido. No se pudo encontrar dicha solicitud de envio");
+                
+            }
 
         }
     }

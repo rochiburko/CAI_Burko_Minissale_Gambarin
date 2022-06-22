@@ -23,11 +23,8 @@ namespace SistemaDeMensajeria
         public void cargarDatos()
         {
 
-            /*  Console.WriteLine("Encomienda SI | NO");
               this.seDebePasarARetirar = validarInputSiNO();
-
-              Console.WriteLine("Correspondencia SI | NO");
-              this.seRetiraPorSucursal = validarInputSiNO();*/
+              this.seRetiraPorSucursal = validarInputSiNO();
            
                 Console.WriteLine(" ");
                 Console.WriteLine("INGRESE EL NUMERO DEL TIPO DE ENVIO");
