@@ -18,8 +18,6 @@ namespace SistemaDeMensajeria
 			this.clienteEmisor = cliente;
 		}
 
-      
-
         public void cargarDatos()
         {
 

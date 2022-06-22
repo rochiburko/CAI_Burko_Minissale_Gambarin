@@ -14,7 +14,7 @@ while (!usuarioValido)
      
     }
         Console.ForegroundColor = ConsoleColor.White;
-        Console.WriteLine("Ingrese su usuario");
+        Console.WriteLine("Ingrese su usuario corporativo");
         nombreUsuario = Console.ReadLine();
         Console.Clear();
 
