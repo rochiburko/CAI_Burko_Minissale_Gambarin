@@ -26,6 +26,8 @@ namespace SistemaDeMensajeria
                     break;
                 case 2:
                     Console.WriteLine("Usted selecciono Consultar estado de servicio");
+                    ConsultaEstadoDeEnvio estadoEnvio = new ConsultaEstadoDeEnvio(cliente);
+                    estadoEnvio.mostrarEstado();
                     break;
                 case 3:
                     Console.WriteLine("Saliendo del programa");

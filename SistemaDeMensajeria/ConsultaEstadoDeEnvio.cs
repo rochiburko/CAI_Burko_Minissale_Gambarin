@@ -10,59 +10,39 @@ namespace SistemaDeMensajeria
 
     {
         public int numeroSeguimiento { get; set; }
-        public string usuario { get; set; }
-        public string estado { get; set; }
-        public int dni { get; set; }
-        public string localidad { get; set; }
-        public string codigoPostal { get; set; }
-
         private string estadoEnvios = "../../datos/estadoEnvios.txt";
-        private string archivoDatosSucursales = "../../datos/sucursales.txt";
+        public Cliente idEnvios;
+        string estadoEnvio = null;
+       
+
+        public ConsultaEstadoDeEnvio(Cliente idEnvios)
+       {
+           this.idEnvios = idEnvios;
+       }
 
 
-
-     /*   public Estado(int numeroSeguimiento)
+        public void mostrarEstado()
         {
-            this.numeroSeguimiento = numeroSeguimiento;
-        }*/
 
+            Console.WriteLine("Por favor, ingrese el número de seguimiento del envio");
+            string estadoEnvio = Console.ReadLine();
+            // bool estadoDeEnvio = true;
+            /* var stream = File.OpenRead(estadoEnvios);
+             var reader = new StreamReader(stream);
 
-        public bool mostrarEstado()
-        {
-            bool estadoDeEnvio = true;
-            var stream = File.OpenRead(estadoEnvios);
-            var reader = new StreamReader(stream);
+             if (numeroSeguimiento != 123456)
+             {
+                 Console.ForegroundColor = ConsoleColor.Red;
+                 Console.WriteLine("No se pudo encontrar dicha solicitud de envio");
 
-            if (numeroSeguimiento != 123456)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("No se pudo encontrar dicha solicitud de envio");
+             }
+             else
+             {
+                 Console.WriteLine("El estado es: Lista para retirar en sucursarl");
 
-            }
-            else
-            {
+             }*/
 
-                Console.WriteLine("El estado es: Lista para retirar en sucursarl");
-
-            }
-
-
-
-            var stream_sucursales = File.OpenRead(archivoDatosSucursales);
-            var reader_sucursales = new StreamReader(stream_sucursales);
-
-
-            if (new FileInfo(archivoDatosSucursales).Length != 0)
-            {
-                while (!reader_sucursales.EndOfStream)
-                {
-                    var linea = reader_sucursales.ReadLine();
-                    string[] valores = linea.Split(';');
-
-                }
-            }
-
-            return estadoDeEnvio;
+            // return estadoDeEnvio;
 
         }
     }

@@ -54,7 +54,7 @@
             switch (numeroIngresado)
             {
                 case 1:
-                    Console.WriteLine("Usted selecciono Solicitar envio. Elija el tipo de envio");
+                    Console.WriteLine("Usted selecciono Solicitar envio. Elija el tipo de envio que desea realizar");
                     break;
                 case 2:
                     Console.WriteLine("Usted selecciono Consultar estado de envio");

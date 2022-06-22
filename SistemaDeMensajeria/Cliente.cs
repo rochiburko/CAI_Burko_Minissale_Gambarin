@@ -11,7 +11,8 @@ namespace SistemaDeMensajeria
         public string direccion { get; set; }
         public int nroCelular { get; set; }
         public string correoElectronico { get; set; }
-        public String idEnvios { get; set; }
+        public string idEnvios { get; set; }
+
         private string archivoDatosClientes = @"../../datos/Cliente.txt";
 
         public Cliente()
