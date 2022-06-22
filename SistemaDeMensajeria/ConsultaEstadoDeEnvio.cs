@@ -30,9 +30,7 @@ namespace SistemaDeMensajeria
 
              if (estadoEnvio == "1234")
              {
-                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("Su envio se encuentra listo  para retirar en sucursarl");
-              
             }
              else
              {

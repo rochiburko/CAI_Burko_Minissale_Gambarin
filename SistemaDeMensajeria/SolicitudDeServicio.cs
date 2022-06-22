@@ -21,8 +21,8 @@ namespace SistemaDeMensajeria
         public void cargarDatos()
         {
 
-              this.seDebePasarARetirar = validarInputSiNO();
-              this.seRetiraPorSucursal = validarInputSiNO();
+            //  this.seDebePasarARetirar = validarInputSiNO();
+             // this.seRetiraPorSucursal = validarInputSiNO();
            
                 Console.WriteLine(" ");
                 Console.WriteLine("INGRESE EL NUMERO DEL TIPO DE ENVIO");
@@ -32,7 +32,7 @@ namespace SistemaDeMensajeria
 
                 int numeroIngresado;
 
-                numeroIngresado = solcitarNumeroEntre(0, 3);
+                numeroIngresado = Utils.solcitarNumeroEntre(0, 3);
 
                 Console.Clear();
 
@@ -40,7 +40,7 @@ namespace SistemaDeMensajeria
                 {
                     case 1:
                         Console.WriteLine("Usted selecciono Solicitar envio. Elija el tipo de envio");
-
+        
                         break;
                     case 2:
                         Console.WriteLine("Usted selecciono Consultar estado de envio");
@@ -51,43 +51,5 @@ namespace SistemaDeMensajeria
                 }
         }
 
-        public static int solcitarNumeroEntre(int numero1, int numero2)
-        {
-            int nroIngresado;
-            Boolean esNroEntero;
-
-            do
-            {
-                esNroEntero = int.TryParse(Console.ReadLine(), out nroIngresado);
-            }
-            while (nroIngresado < numero1 || nroIngresado > numero2 || esNroEntero == false);
-
-            return nroIngresado;
-        }
-
-        public bool validarInputSiNO()
-        {
-            string valorIngresado;
-            bool esPrimerIntento = true;
-
-            do {
-                if (!esPrimerIntento)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Recuerde que debe responder con 'SI' o 'NO'");
-                }
-                valorIngresado = Console.ReadLine().ToUpper();
-                esPrimerIntento = false;
-            } while (!valorIngresado.Equals("SI") && !valorIngresado.Equals("NO"));
-
-            Console.Clear();
-
-            if (valorIngresado.Equals("SI"))
-            {
-                return true;
-            }
-
-            return false;
-        }
     }
 }

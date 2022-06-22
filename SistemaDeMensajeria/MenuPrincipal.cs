@@ -13,7 +13,7 @@ namespace SistemaDeMensajeria
 
             int numeroIngresado;
            
-            numeroIngresado = solcitarNumeroEntre(0, 3);
+            numeroIngresado = Utils.solcitarNumeroEntre(0, 3);
 
             Console.Clear();
 
@@ -35,19 +35,7 @@ namespace SistemaDeMensajeria
             }
 
         }
-        public static int solcitarNumeroEntre(int numero1, int numero2)
-        {
-            int nroIngresado;
-            Boolean esNroEntero;
-
-            do
-            {
-                esNroEntero = int.TryParse(Console.ReadLine(), out nroIngresado);
-            }
-            while (nroIngresado < numero1 || nroIngresado > numero2 || esNroEntero == false);
-
-            return nroIngresado;
-        }
+      
     }
 
 }

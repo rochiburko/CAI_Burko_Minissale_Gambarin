@@ -46,9 +46,7 @@
             Console.WriteLine("3 - Salir del programa");
 
             int numeroIngresado;
-
             numeroIngresado = solcitarNumeroEntre(0, 3);
-
             Console.Clear();
 
             switch (numeroIngresado)
