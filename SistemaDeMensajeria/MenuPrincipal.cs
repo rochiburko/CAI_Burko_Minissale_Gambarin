@@ -20,7 +20,7 @@ namespace SistemaDeMensajeria
             switch (numeroIngresado)
             {
                 case 1:
-                    Console.WriteLine("Usted selecciono Solicitar envio. Elija el tipo de envio");
+                    Console.WriteLine("Usted selecciono SOLICITAR SERVICIO");
                     SolicitudDeServicio solicitud = new SolicitudDeServicio(cliente);
                     solicitud.cargarDatos();
                     break;

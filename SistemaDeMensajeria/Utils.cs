@@ -10,14 +10,23 @@ namespace SistemaDeMensajeria
     {
         public static int solcitarNumeroEntre(int numero1, int numero2)
         {
+            bool esPrimerIntento = true;
             int nroIngresado;
-            Boolean esNroEntero;
+            bool esNroEntero;
 
             do
             {
+                if (!esPrimerIntento)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Debe seleccionar una opcion valida");
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                }
                 esNroEntero = int.TryParse(Console.ReadLine(), out nroIngresado);
+                esPrimerIntento = false;
             }
-            while (nroIngresado < numero1 || nroIngresado > numero2 || esNroEntero == false);
+            while (nroIngresado == 0 || nroIngresado < numero1 || nroIngresado > numero2 || esNroEntero == false);
 
             return nroIngresado;
         }
@@ -48,7 +57,51 @@ namespace SistemaDeMensajeria
             return false;
         }
 
-    }
+        public static double solicitarPeso()
+        {
+            bool esPrimerIntento = true;
+            double nroIngresado;
+            bool esNumeroValido;
 
+            do
+            {
+                if (!esPrimerIntento)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("El peso de encomienda debe ser superior a 0.0 KG y menor a 30 KG");
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                }
+                esNumeroValido = double.TryParse(Console.ReadLine(), out nroIngresado);
+                esPrimerIntento = false;
+            }
+            while (nroIngresado == 0 || nroIngresado < 0 || nroIngresado > 30 || esNumeroValido == false);
+
+            return nroIngresado;
+        }
+
+        public static int solicitarDocumento()
+        {
+            bool esPrimerIntento = true;
+            int nroIngresado;
+            bool esNumeroValido;
+
+            do
+            {
+                if (!esPrimerIntento)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Debe ingresar un numero de documento valido");
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                }
+                esNumeroValido = int.TryParse(Console.ReadLine(), out nroIngresado);
+                esPrimerIntento = false;
+            }
+            while (nroIngresado < 10000000 || nroIngresado > 100000000 || esNumeroValido == false);
+
+            return nroIngresado;
+        }
+    }
 }
 

@@ -11,30 +11,41 @@ while (!usuarioValido)
     {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("El usuario ingresado es invalido, por favor vuelva a ingresar sus datos");
-     
+        Console.ForegroundColor = ConsoleColor.White;
     }
-        Console.WriteLine("Ingrese su usuario corporativo");
-        nombreUsuario = Console.ReadLine();
-        Console.Clear();
 
-        Console.WriteLine("Ingrese su contraseña");
-        string contraseña = Console.ReadLine();
-        Console.Clear();
+    //Usuarios de prueba:
+    //1234; rosarioburko; hola2022
+    //2345; juandominguez; hola2021
 
-    Usuario usuarioIngresado = new Usuario(nombreUsuario, contraseña);
+    Console.WriteLine("Ingrese su numero de cliente corporativo");
+    string numeroCorporativo = Console.ReadLine();
+    Console.Clear();
+
+    Console.WriteLine("Ingrese su usuario");
+    nombreUsuario = Console.ReadLine();
+    Console.Clear();
+
+    Console.WriteLine("Ingrese su contraseña");
+    string contraseña = Console.ReadLine();
+    Console.Clear();
+
+    Usuario usuarioIngresado = new Usuario(numeroCorporativo,nombreUsuario, contraseña);
 
     usuarioValido = usuarioIngresado.validarUsuario();
     esPrimerIntento = false;
 }
 
-Console.WriteLine($"Los datos ingresados son correctos! Bienvenido {nombreUsuario}");
+Console.WriteLine($"Bienvenido {nombreUsuario}");
 
 //Busco el cliente asociado al nombre de usuario ingresado
 Cliente cliente = new Cliente().traerDatosCliente(nombreUsuario);
 
-Console.WriteLine($"La direccion del cliente es: {cliente.direccion}");
-
-Console.WriteLine($"Los envios del cliente son: {cliente.idEnvios}");
+if (cliente.idEnvios != null)
+{
+    //Console.WriteLine($"La direccion del cliente es: {cliente.direccion}");
+    Console.WriteLine($"Por el momento, usted cuenta con los siguientes envios: {cliente.idEnvios}");
+}
 
 MenuPrincipal.mostrar(cliente);
 
