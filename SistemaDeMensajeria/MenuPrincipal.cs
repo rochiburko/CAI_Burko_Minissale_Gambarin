@@ -25,9 +25,16 @@ namespace SistemaDeMensajeria
                     solicitud.cargarDatos();
                     break;
                 case 2:
-                    Console.WriteLine("Usted selecciono Consultar estado de servicio");
-                    ConsultaEstadoDeEnvio estadoEnvio = new ConsultaEstadoDeEnvio(cliente);
-                    estadoEnvio.mostrarEstado();
+                    Console.WriteLine("Usted selecciono CONSULTAR ESTADO DE ENVIO");
+                    if (cliente.idEnvios == null)
+                    {
+                        Console.WriteLine("Usted no tiene envios para mostrar");
+                        break;
+                    }
+                    List<int> envios = Utils.parsearEnvios(cliente.idEnvios);
+                    ConsultaEstadoDeEnvio consulta = new ConsultaEstadoDeEnvio();
+                    string estado = consulta.consultar(envios);
+                    Console.WriteLine($"El estado de su pedido es {estado}");
                     break;
                 case 3:
                     Console.WriteLine("Saliendo del programa");

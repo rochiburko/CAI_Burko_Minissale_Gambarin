@@ -3,7 +3,12 @@ namespace SistemaDeMensajeria
 {
 	public class SolicitudDeServicio
 	{
-		public Cliente clienteEmisor { get; set; } //Estos datos se obtienen en forma automática del archivo
+        private static string CARGADO = "cargado";
+        private static string LISTO_DESPACHAR = "Listo para despachar";
+        private static string EN_PROCESO = "En proceso de envio";
+        private static string ENVIADO = "Enviado";
+
+        public Cliente clienteEmisor { get; set; } //Estos datos se obtienen en forma automática del archivo
         public Cliente clienteReceptor { get; set; } //Datos del Receptor
         public Envio envio { get; set; }
 
@@ -83,7 +88,7 @@ namespace SistemaDeMensajeria
             Console.WriteLine("Ingrese el documento de quien va a recibir el paquete");
             int documentoReceptor = Utils.solicitarDocumento();
 
-            Envio envio = new Envio(peso, sucursalOrigen, sucursalDestino, documentoReceptor);
+            Envio envio = new Envio(CARGADO, peso, sucursalOrigen, sucursalDestino, documentoReceptor);
             envio.asignarNumeroDeSeguimiento();
             envio.cargarEnvio();
         }

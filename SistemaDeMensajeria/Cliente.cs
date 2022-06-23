@@ -21,6 +21,7 @@ namespace SistemaDeMensajeria
 
         public Cliente traerDatosCliente(String nombreUsuario)
         {
+            string idsEnvios;
             var stream = File.OpenRead(archivoDatosClientes);
             var reader = new StreamReader(stream);
 
@@ -39,6 +40,7 @@ namespace SistemaDeMensajeria
             }
 
             stream.Close();
+
             return this;
         }
     }

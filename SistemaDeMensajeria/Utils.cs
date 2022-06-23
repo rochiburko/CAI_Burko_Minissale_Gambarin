@@ -102,6 +102,46 @@ namespace SistemaDeMensajeria
 
             return nroIngresado;
         }
+
+        public static List<int> parsearEnvios(string listaEnvios)
+        {
+            List<int> envios = new List<int>();
+
+            string[] words = listaEnvios.Split('|');
+
+            foreach (var word in words)
+            {
+                int numeroEnvio = int.Parse(word);
+                envios.Add(numeroEnvio);
+            }
+
+            return envios;
+        }
+
+        public static int solicitarNumeroEnvioExistente(List<int> envios)
+        {
+            bool esPrimerIntento = true;
+            int nroIngresado;
+            bool esNumeroValido;
+
+            do
+            {
+                if (!esPrimerIntento)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Debe ingresar un numero de seguimiento valido");
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                }
+
+                esNumeroValido = int.TryParse(Console.ReadLine(), out nroIngresado);
+
+                esPrimerIntento = false;
+            }
+            while (!(envios.IndexOf(nroIngresado) != -1) || esNumeroValido == false);
+
+            return nroIngresado;
+        }
     }
 }
 

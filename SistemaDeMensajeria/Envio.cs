@@ -3,7 +3,8 @@
     public class Envio
     {
         public int numeroSeguimiento { get; set; }
-        public double peso { get; set; } //Si es correspondencia no se solicitara el peso
+        public string estado { get; set; }
+        public double peso { get; set; } 
         public string sucursalOrigen { get; set; }
         public string sucursalDestino { get; set; }
         public int documentoReceptor { get; set; }
@@ -14,8 +15,9 @@
         {
         }
 
-        public Envio(double peso, string sucursalOrigen, string sucursalDestino, int documentoReceptor)
+        public Envio(string estado, double peso, string sucursalOrigen, string sucursalDestino, int documentoReceptor)
         {
+            this.estado = estado;
             this.peso = peso;
             this.sucursalOrigen = sucursalOrigen;
             this.sucursalDestino = sucursalDestino;
@@ -73,10 +75,41 @@
                 {
                     writer.WriteLine(linea);
                 }
-                writer.WriteLine(this.numeroSeguimiento + ";" + this.peso + ";" + this.sucursalOrigen + ";" + this.sucursalDestino + ";" + this.documentoReceptor);
+                writer.WriteLine(this.numeroSeguimiento + ";"
+                    + this.estado + ";"
+                    + this.peso + ";"
+                    + this.sucursalOrigen + ";"
+                    + this.sucursalDestino + ";"
+                    + this.documentoReceptor);
+
                 writer.Close();
             }
 
         }
+
+        public void consultarEnvio()
+        {
+            int numeroSeguimiento = 0;
+            var stream = File.OpenRead(archivoDatosEnvios);
+            var reader = new StreamReader(stream);
+
+            while (!reader.EndOfStream)
+            {
+                var linea = reader.ReadLine();
+
+                string[] datos = linea.Split(';');
+
+                if (int.Parse(datos[0]) > numeroSeguimiento)
+                {
+                    //Obtengo el ultimo numero de seguimiento asignado a un pedido
+                    numeroSeguimiento = (int.Parse(datos[0]));
+                }
+            }
+
+            stream.Close();
+
+            this.numeroSeguimiento = numeroSeguimiento + 1;
+        }
+
     }
 }

@@ -10,36 +10,51 @@ namespace SistemaDeMensajeria
 
     {
         public int numeroSeguimiento { get; set; }
-        private string estadoEnvios = "../../datos/estadoEnvios.txt";
-        public Cliente idEnvios;
-        string estadoEnvio = null;
-       
+        private string archivoDatosEnvios = "../../datos/envios.txt";
 
-        public ConsultaEstadoDeEnvio(Cliente idEnvios)
-       {
-           this.idEnvios = idEnvios;
-       }
-
-
-        public void mostrarEstado()
+        public string consultar(List<int> envios)
         {
-
-            Console.WriteLine("Por favor, ingrese el número de seguimiento del envio:");
-            string estadoEnvio = Console.ReadLine();
-            Console.Clear();
-
-             if (estadoEnvio == "1234")
-             {
-                Console.WriteLine("Su envio se encuentra listo  para retirar en sucursarl");
-            }
-             else
-             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(" Número de seguimiento invalido. No se pudo encontrar dicha solicitud de envio");
-                
-            }
+            listarEnvios(envios);
+            int numeroIngresado = Utils.solicitarNumeroEnvioExistente(envios);
+            return traerEstadoEnvio(numeroIngresado);
 
         }
+
+        private void listarEnvios(List<int> envios)
+        {
+
+            Console.WriteLine("Ingrese el numero de seguimiento del envio por el cual desea consultar");
+
+            foreach (var envio in envios)
+            {
+                Console.WriteLine($"Envio con numero de seguimiento {envio}");
+            }
+        }
+
+        private string traerEstadoEnvio(int numeroSeguimiento)
+        {
+            string estado = null;
+            var stream = File.OpenRead(archivoDatosEnvios);
+            var reader = new StreamReader(stream);
+
+            while (!reader.EndOfStream)
+            {
+                var linea = reader.ReadLine();
+
+                string[] datos = linea.Split(';');
+
+                if (int.Parse(datos[0]).Equals(numeroSeguimiento))
+                {
+                    estado = datos[1];
+                    break;
+                }
+            }
+
+            stream.Close();
+
+            return estado;
+        }
+
     }
 }
 
