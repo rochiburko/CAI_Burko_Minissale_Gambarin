@@ -23,7 +23,7 @@ namespace SistemaDeMensajeria
         private void listarEnvios(List<int> envios)
         {
 
-            Console.WriteLine("Ingrese el numero de seguimiento del envio por el cual desea consultar");
+            Console.WriteLine("INGRESE EL NRO DE SEGUIMIENTO DLE ENVIO POR EL CUAL DESEA CONSULTAR");
 
             foreach (var envio in envios)
             {
@@ -45,8 +45,7 @@ namespace SistemaDeMensajeria
 
                 if (int.Parse(datos[0]).Equals(numeroSeguimiento))
                 {
-                    estado = datos[1];
-                    break;
+                    estado = datos[2];
                 }
             }
 

@@ -1,23 +1,24 @@
 ﻿using System;
 namespace SistemaDeMensajeria
 {
-	public class SolicitudDeServicio
+	public static class SolicitudDeServicio
 	{
-        private static string CARGADO = "cargado";
+        private static string INGRESADO_EN_SISTEMA = "Ingresado en sistema";
+        private static string RECIBIDO = "Recibido";
         private static string LISTO_DESPACHAR = "Listo para despachar";
         private static string EN_PROCESO = "En proceso de envio";
         private static string ENVIADO = "Enviado";
 
-        public Cliente clienteEmisor { get; set; } //Estos datos se obtienen en forma automática del archivo
-        public Cliente clienteReceptor { get; set; } //Datos del Receptor
-        public Envio envio { get; set; }
+        //       public Cliente clienteEmisor { get; set; } //Estos datos se obtienen en forma automática del archivo
+        //       public Cliente clienteReceptor { get; set; } //Datos del Receptor
+        //      public Envio envio { get; set; }
 
-        public SolicitudDeServicio(Cliente cliente)
-		{
-			this.clienteEmisor = cliente;
-		}
+        //       public SolicitudDeServicio(Cliente cliente)
+        //		{
+        //			this.clienteEmisor = cliente;
+        //		}
 
-        public void cargarDatos()
+        public static Envio cargarDatos(Cliente cliente)
         {
             int numeroIngresado;
             string sucursalOrigen = null;
@@ -26,7 +27,7 @@ namespace SistemaDeMensajeria
             Console.WriteLine(" ");
 
             //PESO
-            Console.WriteLine("Ingrese el peso del paquete, el mismo debe estar expresado en KG");
+            Console.WriteLine("INGRESE EL PESO DEL PAQUETE (KG)");
             double peso = Utils.solicitarPeso();
             Console.Clear();
 
@@ -88,9 +89,29 @@ namespace SistemaDeMensajeria
             Console.WriteLine("Ingrese el documento de quien va a recibir el paquete");
             int documentoReceptor = Utils.solicitarDocumento();
 
-            Envio envio = new Envio(CARGADO, peso, sucursalOrigen, sucursalDestino, documentoReceptor);
+            string nombreUsuario = cliente.nombreUsuario;
+            Envio envio = new Envio(
+                INGRESADO_EN_SISTEMA,
+                nombreUsuario, peso,
+                sucursalOrigen,
+                sucursalDestino,
+                documentoReceptor
+                );
             envio.asignarNumeroDeSeguimiento();
-            envio.cargarEnvio();
+            envio.cargarEnvioEnTXTEnvios();
+            envio.cargarEnvioEnTXTClientes(cliente.nombreUsuario,envio.numeroSeguimiento);
+
+            return envio;
+        }
+
+        public static void mostrarResumen(Envio envio)
+        {
+            Console.WriteLine("RESUMEN DE SU SOLICITUD");
+            Console.WriteLine($"Numero de seguimiento: {envio.numeroSeguimiento}");
+            Console.WriteLine($"El peso declarado es: {envio.peso}");
+            Console.WriteLine($"La sucursal de origen es: {envio.sucursalOrigen}");
+            Console.WriteLine($"La sucursal de destino es: {envio.sucursalDestino}");
+            Console.WriteLine($"El DNI del receptor es: {envio.documentoReceptor}");
         }
     }
 }

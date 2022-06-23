@@ -4,20 +4,18 @@
     {
         public int numeroSeguimiento { get; set; }
         public string estado { get; set; }
+        public string nombreUsuario { get; set; }
         public double peso { get; set; } 
         public string sucursalOrigen { get; set; }
         public string sucursalDestino { get; set; }
         public int documentoReceptor { get; set; }
         private string archivoDatosEnvios = "../../datos/envios.txt";
+        private string archivoDatosClientes = @"../../datos/Cliente.txt";
 
-
-        public Envio()
-        {
-        }
-
-        public Envio(string estado, double peso, string sucursalOrigen, string sucursalDestino, int documentoReceptor)
+        public Envio(string estado, string nombreUsuario, double peso, string sucursalOrigen, string sucursalDestino, int documentoReceptor)
         {
             this.estado = estado;
+            this.nombreUsuario = nombreUsuario;
             this.peso = peso;
             this.sucursalOrigen = sucursalOrigen;
             this.sucursalDestino = sucursalDestino;
@@ -48,7 +46,7 @@
             this.numeroSeguimiento = numeroSeguimiento + 1;
         }
 
-        public void cargarEnvio()
+        public void cargarEnvioEnTXTEnvios()
         {
 
             var stream = File.OpenRead(archivoDatosEnvios);
@@ -76,6 +74,7 @@
                     writer.WriteLine(linea);
                 }
                 writer.WriteLine(this.numeroSeguimiento + ";"
+                    + this.nombreUsuario + ";"
                     + this.estado + ";"
                     + this.peso + ";"
                     + this.sucursalOrigen + ";"
@@ -85,6 +84,41 @@
                 writer.Close();
             }
 
+        }
+
+        public void cargarEnvioEnTXTClientes(string nombreUsuario, int numeroSeguimientoNuevoEnvio)
+        {
+
+            string estado = null;
+            var stream = File.OpenRead(archivoDatosClientes);
+            var reader = new StreamReader(stream);
+            int lineToEdit = 1;
+
+            //Datos a sobreescribir
+            string usuario = null;
+            string direccion = null;
+            string idEnvios = null;
+
+            while (!reader.EndOfStream)
+            {
+                var linea = reader.ReadLine();
+
+                string[] datos = linea.Split(';');
+
+                if (datos[0].Equals(nombreUsuario))
+                {
+                    usuario = datos[0];
+                    direccion = datos[1];
+                    idEnvios = datos[2];
+                    break;
+                }
+
+                lineToEdit++;
+            }
+
+            Utils.lineChanger($"{usuario};{direccion};{idEnvios}|{numeroSeguimientoNuevoEnvio}", archivoDatosClientes, lineToEdit);
+
+            stream.Close();
         }
 
         public void consultarEnvio()

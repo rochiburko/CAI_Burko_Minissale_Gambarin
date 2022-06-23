@@ -18,15 +18,15 @@ while (!usuarioValido)
     //1234; rosarioburko; hola2022
     //2345; juandominguez; hola2021
 
-    Console.WriteLine("Ingrese su numero de cliente corporativo");
+    Console.WriteLine("INGRESE SU NUMERO DE CLIENTE CORPORATIVO");
     string numeroCorporativo = Console.ReadLine();
     Console.Clear();
 
-    Console.WriteLine("Ingrese su usuario");
+    Console.WriteLine("INGRESE SU USUARIO");
     nombreUsuario = Console.ReadLine();
     Console.Clear();
 
-    Console.WriteLine("Ingrese su contraseña");
+    Console.WriteLine("INGRESE SU CONTRASEÑA");
     string contraseña = Console.ReadLine();
     Console.Clear();
 
@@ -36,7 +36,7 @@ while (!usuarioValido)
     esPrimerIntento = false;
 }
 
-Console.WriteLine($"Bienvenido {nombreUsuario}");
+Console.WriteLine($"BIENVENIDO {nombreUsuario}");
 
 //Busco el cliente asociado al nombre de usuario ingresado
 Cliente cliente = new Cliente().traerDatosCliente(nombreUsuario);

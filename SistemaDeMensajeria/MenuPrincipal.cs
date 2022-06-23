@@ -21,8 +21,9 @@ namespace SistemaDeMensajeria
             {
                 case 1:
                     Console.WriteLine("Usted selecciono SOLICITAR SERVICIO");
-                    SolicitudDeServicio solicitud = new SolicitudDeServicio(cliente);
-                    solicitud.cargarDatos();
+                    Envio solicitudEnvio = SolicitudDeServicio.cargarDatos(cliente);
+                    Console.Clear();
+                    SolicitudDeServicio.mostrarResumen(solicitudEnvio);
                     break;
                 case 2:
                     Console.WriteLine("Usted selecciono CONSULTAR ESTADO DE ENVIO");
