@@ -4,19 +4,6 @@ namespace SistemaDeMensajeria
 	public static class SolicitudDeServicio
 	{
         private static string INGRESADO_EN_SISTEMA = "Ingresado en sistema";
-        private static string RECIBIDO = "Recibido";
-        private static string LISTO_DESPACHAR = "Listo para despachar";
-        private static string EN_PROCESO = "En proceso de envio";
-        private static string ENVIADO = "Enviado";
-
-        //       public Cliente clienteEmisor { get; set; } //Estos datos se obtienen en forma automática del archivo
-        //       public Cliente clienteReceptor { get; set; } //Datos del Receptor
-        //      public Envio envio { get; set; }
-
-        //       public SolicitudDeServicio(Cliente cliente)
-        //		{
-        //			this.clienteEmisor = cliente;
-        //		}
 
         public static Envio cargarDatos(Cliente cliente)
         {
