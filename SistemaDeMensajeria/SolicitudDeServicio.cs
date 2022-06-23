@@ -20,11 +20,6 @@ namespace SistemaDeMensajeria
             Console.Clear();
 
             //RAPIDEZ DE ENVIO
-            Console.WriteLine("INGRESE LA RAPIDEZ DE SU PEDIDO (KG)");
-            Console.WriteLine("1 - Normal");
-            Console.WriteLine("2 - Urgente");
-            Console.Clear();
-
             Console.WriteLine("INGRESE LA RAPIDEZ DE SU PEDIDO, si es NORMAL o URGENTE");
             string rapidez = Console.ReadLine();
             Console.Clear();
