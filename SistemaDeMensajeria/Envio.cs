@@ -9,6 +9,10 @@
         public string sucursalOrigen { get; set; }
         public string sucursalDestino { get; set; }
         public int documentoReceptor { get; set; }
+        public string prioridad { get; set; }
+        public string correoElectronicoReceptor { get; set; }
+        
+
         private string archivoDatosEnvios = "../../datos/envios.txt";
         private string archivoDatosClientes = @"../../datos/Cliente.txt";
 
@@ -20,6 +24,7 @@
             this.sucursalOrigen = sucursalOrigen;
             this.sucursalDestino = sucursalDestino;
             this.documentoReceptor = documentoReceptor;
+            
         }
 
         public void asignarNumeroDeSeguimiento()
@@ -53,7 +58,6 @@
             var reader = new StreamReader(stream);
 
             List<string> lineas = new List<string>();
-
 
             if (new FileInfo(archivoDatosEnvios).Length != 0)
             {

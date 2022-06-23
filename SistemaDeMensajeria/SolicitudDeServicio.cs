@@ -20,7 +20,7 @@ namespace SistemaDeMensajeria
             Console.Clear();
 
             //RAPIDEZ DE ENVIO
-            Console.WriteLine("INGRESE LA RAPIDEZ DE SU PEDIDO, si es NORMAL o URGENTE");
+            Console.WriteLine("INGRESE LA PRIORIDAD DE SU PEDIDO, si es NORMAL o URGENTE");
             string rapidez = Console.ReadLine();
             Console.Clear();
 
@@ -128,6 +128,9 @@ namespace SistemaDeMensajeria
                     MenuPrincipal.mostrar(cliente);
                     break;
             }
+
+
+            Console.Clear();
 
             //SUCURSAL DE DESTINO
             Console.WriteLine("INGRESE SUCURSAL DESTINO");
