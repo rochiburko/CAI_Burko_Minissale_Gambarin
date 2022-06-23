@@ -24,8 +24,11 @@ namespace SistemaDeMensajeria
             Console.WriteLine("1 - CABA");
             Console.WriteLine("2 - Catamarca");
             Console.WriteLine("3 - Chaco");
+            Console.WriteLine("4 - Chubut");
+            Console.WriteLine("5 - Cordoba");
+            Console.WriteLine("6 - Volver al menu principal");
 
-            numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+            numeroIngresado = Utils.solcitarNumeroEntre(1, 6);
 
             switch (numeroIngresado)
             {
@@ -36,7 +39,17 @@ namespace SistemaDeMensajeria
                     sucursalOrigen = "Catamarca";
                     break;
                 case 3:
-                    sucursalOrigen = "Chaco";
+                    sucursalDestino = "Chaco";
+                    break;
+                case 4:
+                    sucursalDestino = "Chubut";
+                    break;
+                case 5:
+                    sucursalDestino = "Cordoba";
+                    break;
+                case 6:
+                    Console.Clear();
+                    MenuPrincipal.mostrar(cliente);
                     break;
             }
 
@@ -45,8 +58,11 @@ namespace SistemaDeMensajeria
             Console.WriteLine("1 - CABA");
             Console.WriteLine("2 - Catamarca");
             Console.WriteLine("3 - Chaco");
+            Console.WriteLine("4 - Chubut");
+            Console.WriteLine("5 - Cordoba");
+            Console.WriteLine("6 - Volver al menu principal");
 
-            numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+            numeroIngresado = Utils.solcitarNumeroEntre(1, 6);
 
             Console.Clear();
 
@@ -60,6 +76,16 @@ namespace SistemaDeMensajeria
                     break;
                 case 3:
                     sucursalDestino = "Chaco";
+                    break;
+                case 4:
+                    sucursalDestino = "Chubut";
+                    break;
+                case 5:
+                    sucursalDestino = "Cordoba";
+                    break;
+                case 6:
+                    Console.Clear();
+                    MenuPrincipal.mostrar(cliente);
                     break;
             }
 
@@ -91,7 +117,7 @@ namespace SistemaDeMensajeria
             return envio;
         }
 
-        public static void mostrarResumen(Envio envio)
+        public static void mostrarResumen(Envio envio, Cliente cliente)
         {
             Console.WriteLine("RESUMEN DE SU SOLICITUD");
             Console.WriteLine($"Numero de seguimiento: {envio.numeroSeguimiento}");
@@ -99,6 +125,7 @@ namespace SistemaDeMensajeria
             Console.WriteLine($"La sucursal de origen es: {envio.sucursalOrigen}");
             Console.WriteLine($"La sucursal de destino es: {envio.sucursalDestino}");
             Console.WriteLine($"El DNI del receptor es: {envio.documentoReceptor}");
+            Console.WriteLine(" ");
         }
     }
 }

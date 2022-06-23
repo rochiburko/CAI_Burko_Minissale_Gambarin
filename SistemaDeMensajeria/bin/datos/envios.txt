@@ -1,4 +1,5 @@
 1;rosarioburko;ENVIADO;23;CABA;Chaco;40900370
-2;rosarioburko;RECIBIDO;23;CABA;CABA;40900370
-3;rosarioburko;Ingresado en sistema;4;CABA;Chaco;40900890
-4;rosarioburko;Ingresado en sistema;2;CABA;Chaco;32323243
+2;rosarioburko;RECIBIDO;23;CABA;Catamarca;40900370
+3;pedrogomez;Ingresado en sistema;4;CABA;Chaco;40900890
+
+

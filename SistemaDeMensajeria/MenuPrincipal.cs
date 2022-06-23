@@ -9,11 +9,12 @@ namespace SistemaDeMensajeria
             Console.WriteLine("INGRESA UN NUMERO PARA NAVEGAR EN EL MENU");
             Console.WriteLine("1 - Solicitar envio");
             Console.WriteLine("2 - Consultar estado de envio");
-            Console.WriteLine("3 - Salir del programa");
+            Console.WriteLine("3 - Cerrar sesion");
+            Console.WriteLine("4 - Salir del programa");
 
             int numeroIngresado;
            
-            numeroIngresado = Utils.solcitarNumeroEntre(0, 3);
+            numeroIngresado = Utils.solcitarNumeroEntre(0, 4);
 
             Console.Clear();
 
@@ -23,7 +24,11 @@ namespace SistemaDeMensajeria
                     Console.WriteLine("Usted selecciono SOLICITAR SERVICIO");
                     Envio solicitudEnvio = SolicitudDeServicio.cargarDatos(cliente);
                     Console.Clear();
-                    SolicitudDeServicio.mostrarResumen(solicitudEnvio);
+                    SolicitudDeServicio.mostrarResumen(solicitudEnvio, cliente);
+                    Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
+                    Console.ReadKey();
+                    Console.Clear();
+                    MenuPrincipal.mostrar(cliente);
                     break;
                 case 2:
                     Console.WriteLine("Usted selecciono CONSULTAR ESTADO DE ENVIO");
@@ -35,10 +40,20 @@ namespace SistemaDeMensajeria
                     List<int> envios = Utils.parsearEnvios(cliente.idEnvios);
                     ConsultaEstadoDeEnvio consulta = new ConsultaEstadoDeEnvio();
                     string estado = consulta.consultar(envios);
-                    Console.WriteLine($"El estado de su pedido es {estado}");
+                    Console.Clear();
+                    Console.WriteLine($"EL ESTADO DE SU ENVIO ES: {estado}");
+                    Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
+                    Console.ReadKey();
+                    Console.Clear();
+                    MenuPrincipal.mostrar(cliente);
                     break;
                 case 3:
-                    Console.WriteLine("Saliendo del programa");
+                    Console.WriteLine("CERRANDO SESION");
+                    Console.Clear();
+                    MenuInicial.mostrar();
+                    break;
+                case 4:
+                    Console.WriteLine("SALIENDO DEL PROGRAMA");
                     break;
             }
 
