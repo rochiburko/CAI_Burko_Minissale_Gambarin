@@ -26,10 +26,17 @@ namespace SistemaDeMensajeria
                     Console.ForegroundColor = ConsoleColor.White;
                 }
 
-                //Usuarios de prueba:
-                //30657863676; rosarioburko; hola2022
-               // 30657863676; pedrogomez; hola2021
-                Console.WriteLine("INGRESE SU NUMERO  DE CUIT");
+                /* USUARIOS DE PRUEBA
+                20306578636768; rosarioburko; usuario1
+                20306578636788; minissalesofia; usuario2
+                20306578636788; nicolasgambartin; usuario3
+                27306578636803; pedrogomez; usuario4
+                27306578636813; juanperez; usuario5
+                27306578636814; martasanchez; usuario6
+                27306578636815; juanamorales; usuario7
+                */
+
+                Console.WriteLine("INGRESE SU NUMERO DE CUIT");
                 string numeroCuit = Console.ReadLine();
                 Console.Clear();
 

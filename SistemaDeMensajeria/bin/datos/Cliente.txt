@@ -1,2 +1,2 @@
-rosarioburko;Edison 354, Martinez, Buenos Aires;1|2
+rosarioburko;Edison 354, Martinez, Buenos Aires;1|2|4|5|6
 pedrogomez;Edison 100, Olivos, Buenos Aires;3
