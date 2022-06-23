@@ -4,15 +4,15 @@ namespace SistemaDeMensajeria
     public class Cliente
 	{
         public string nombreUsuario { get; set; }
+        public string apellido { get; set; }
         public string direccion { get; set; }
         public string idEnvios { get; set; }
-        //DATOS A AGREGAR:
-        //  public int nroCelular { get; set; }
-        //   public string correoElectronico { get; set; }
-        //   public int dni { get; set; }
-        //  public int cuit { get; set; }
-        //   public string nombre { get; set; }
-        //   public string apellido { get; set; }
+        public int nroCelular { get; set; }
+        public string correoElectronico { get; set; }
+        public int dni { get; set; }
+        public int cuit { get; set; }
+        public string nombre { get; set; }
+       
 
         private string archivoDatosClientes = @"../../datos/Cliente.txt";
 

@@ -21,7 +21,7 @@ namespace SistemaDeMensajeria
             switch (numeroIngresado)
             {
                 case 1:
-                    Console.WriteLine("Usted selecciono SOLICITAR SERVICIO");
+                    Console.WriteLine("Usted selecciono SOLICITAR ENVIO");
                     Envio solicitudEnvio = SolicitudDeServicio.cargarDatos(cliente);
                     Console.Clear();
                     SolicitudDeServicio.mostrarResumen(solicitudEnvio, cliente);

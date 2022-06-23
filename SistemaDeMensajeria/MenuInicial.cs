@@ -27,9 +27,9 @@ namespace SistemaDeMensajeria
                 }
 
                 //Usuarios de prueba:
-                //1234; rosarioburko; hola2022
-                //2345; juandominguez; hola2021
-                Console.WriteLine("INGRESE EL NRO DE CUIT");
+                //30657863676; rosarioburko; hola2022
+               // 30657863676; pedrogomez; hola2021
+                Console.WriteLine("INGRESE SU NUMERO  DE CUIT");
                 string numeroCuit = Console.ReadLine();
                 Console.Clear();
 
