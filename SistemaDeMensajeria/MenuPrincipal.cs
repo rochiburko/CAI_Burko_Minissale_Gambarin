@@ -34,7 +34,11 @@ namespace SistemaDeMensajeria
                     Console.WriteLine("Usted selecciono CONSULTAR ESTADO DE ENVIO");
                     if (cliente.idEnvios == null)
                     {
-                        Console.WriteLine("Usted no tiene envios para mostrar");
+                        Console.WriteLine("USTED NO TIENE ENVIOS PARA MOSTRAR");
+                        Console.WriteLine("Pulse cualquier tecla para volver al menu principal");
+                        Console.ReadKey();
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
                         break;
                     }
                     List<int> envios = Utils.parsearEnvios(cliente.idEnvios);

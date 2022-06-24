@@ -1,6 +1,10 @@
-1;rosarioburko;ENVIADO;23;CABA;Chaco;40900370
-2;rosarioburko;RECIBIDO;23;CABA;Catamarca;40900370
-3;pedrogomez;Ingresado en sistema;4;CABA;Chaco;40900890
-4;rosarioburko;Ingresado en sistema;5;Catamarca;Chubut;40900890
-5;rosarioburko;Ingresado en sistema;3;CABA;Corrientes;34678611
-6;rosarioburko;Ingresado en sistema;7;CABA;Formosa;30900700
+1;rosarioburko;Ingresado en sistema;5;Cordoba;Entre Rios;30900700;500
+2;rosarioburko;Ingresado en sistema;5;Chubut;Entre Rios;30900700;500
+3;rosarioburko;Ingresado en sistema;10;Chaco;Entre Rios;41800720;1000
+4;rosarioburko;Ingresado en sistema;10;Cordoba;Formosa;43900800;1000
+5;minissalesofia;Ingresado en sistema;3;Entre Rios;Formosa;40100800;300
+6;minissalesofia;Ingresado en sistema;10;CABA;Formosa;43300800;1000
+7;nicolasgambartin;Ingresado en sistema;5;Cordoba;Entre Rios;40900800;500
+8;nicolasgambartin;Ingresado en sistema;10;Entre Rios;Formosa;30900800;1000
+9;rosarioburko;Ingresado en sistema;4;Chaco;Corrientes;95689775;400
+10;minissalesofia;Ingresado en sistema;23;La Rioja;Mendoza;40900369;2300

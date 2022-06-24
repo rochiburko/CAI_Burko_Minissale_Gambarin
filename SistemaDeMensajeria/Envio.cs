@@ -11,7 +11,8 @@
         public int documentoReceptor { get; set; }
         public string prioridad { get; set; }
         public string correoElectronicoReceptor { get; set; }
-        
+        public double costo { get; set; }
+
 
         private string archivoDatosEnvios = "../../datos/envios.txt";
         private string archivoDatosClientes = @"../../datos/Cliente.txt";
@@ -83,7 +84,8 @@
                     + this.peso + ";"
                     + this.sucursalOrigen + ";"
                     + this.sucursalDestino + ";"
-                    + this.documentoReceptor);
+                    + this.documentoReceptor + ";"
+                    + this.costo);
 
                 writer.Close();
             }
@@ -147,6 +149,15 @@
             stream.Close();
 
             this.numeroSeguimiento = numeroSeguimiento + 1;
+        }
+
+        public void calcularCosto()
+        {
+            costo = peso * 100;
+            if (this.prioridad == "URGENTE")
+            {
+                costo = costo * 0.3;
+            }
         }
 
     }

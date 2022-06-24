@@ -54,83 +54,83 @@ namespace SistemaDeMensajeria
                     Console.Clear();
                     break;
                 case 3:
-                    sucursalDestino = "Chaco";
+                    sucursalOrigen = "Chaco";
                     Console.Clear();
                     break;
                 case 4:
-                    sucursalDestino = "Chubut";
+                    sucursalOrigen = "Chubut";
                     Console.Clear();
                     break;
                 case 5:
-                    sucursalDestino = "Cordoba";
+                    sucursalOrigen = "Cordoba";
                     Console.Clear();
                     break;
                 case 6:
-                    sucursalDestino = "Corrientes";
+                    sucursalOrigen = "Corrientes";
                     Console.Clear();
                     break;
                 case 7:
-                    sucursalDestino = "Entre Rios";
+                    sucursalOrigen = "Entre Rios";
                     Console.Clear();
                     break;
                 case 8:
-                    sucursalDestino = "Formosa";
+                    sucursalOrigen = "Formosa";
                     Console.Clear();
                     break;
                 case 9:
-                    sucursalDestino = "Jujuy";
+                    sucursalOrigen = "Jujuy";
                     Console.Clear();
                     break;
                 case 10:
-                    sucursalDestino = "La Pampa";
+                    sucursalOrigen = "La Pampa";
                     Console.Clear();
                     break;
                 case 11:
-                    sucursalDestino = "La Rioja";
+                    sucursalOrigen = "La Rioja";
                     Console.Clear();
                     break;
                 case 12:
-                    sucursalDestino = "Mendoza";
+                    sucursalOrigen = "Mendoza";
                     Console.Clear();
                     break;
                 case 13:
-                    sucursalDestino = "Misiones";
+                    sucursalOrigen = "Misiones";
                     Console.Clear();
                     break;
                 case 14:
-                    sucursalDestino = "Neuquen";
+                    sucursalOrigen = "Neuquen";
                     Console.Clear();
                     break;
                 case 15:
-                    sucursalDestino = "Rio Negro";
+                    sucursalOrigen = "Rio Negro";
                     Console.Clear();
                     break;
                 case 16:
-                    sucursalDestino = "Salta";
+                    sucursalOrigen = "Salta";
                     Console.Clear();
                     break;
                 case 17:
-                    sucursalDestino = "San Juan";
+                    sucursalOrigen = "San Juan";
                     Console.Clear();
                     break;
                 case 18:
-                    sucursalDestino = "San Luis";
+                    sucursalOrigen = "San Luis";
                     Console.Clear();
                     break;
                 case 19:
-                    sucursalDestino = "Santa Cruz";
+                    sucursalOrigen = "Santa Cruz";
                     Console.Clear();
                     break;
                 case 20:
-                    sucursalDestino = "Santa fe";
+                    sucursalOrigen = "Santa fe";
                     Console.Clear();
                     break;
                 case 21:
-                    sucursalDestino = "Santiago del Estero";
+                    sucursalOrigen = "Santiago del Estero";
                     Console.Clear();
                     break;
                 case 22:
-                    sucursalDestino = "Tierra del Fuego";
+                    sucursalOrigen = "Tierra del Fuego";
                     Console.Clear();
                     break;
                 case 23:
@@ -147,16 +147,14 @@ namespace SistemaDeMensajeria
 
             numeroIngresado = Utils.solcitarNumeroEntre(1, 23);
 
-            
-
             switch (numeroIngresado)
             {
                 case 1:
-                    sucursalOrigen = "Ciudad de Buenos Aires";
+                    sucursalDestino = "Ciudad de Buenos Aires";
                     Console.Clear();
                     break;
                 case 2:
-                    sucursalOrigen = "Catamarca";
+                    sucursalDestino = "Catamarca";
                     Console.Clear();
                     break;
                 case 3:
@@ -296,6 +294,8 @@ namespace SistemaDeMensajeria
                 sucursalDestino,
                 documentoReceptor
                 );
+
+            envio.calcularCosto();
             envio.asignarNumeroDeSeguimiento();
             envio.cargarEnvioEnTXTEnvios();
             envio.cargarEnvioEnTXTClientes(cliente.nombreUsuario,envio.numeroSeguimiento);
@@ -311,6 +311,7 @@ namespace SistemaDeMensajeria
             Console.WriteLine($"La sucursal de origen es: {envio.sucursalOrigen}");
             Console.WriteLine($"La sucursal de destino es: {envio.sucursalDestino}");
             Console.WriteLine($"El DNI del receptor es: {envio.documentoReceptor}");
+            Console.WriteLine($"El costo del envio es ${envio.costo}");
             Console.WriteLine(" ");
         }
 
