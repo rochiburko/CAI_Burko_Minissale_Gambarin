@@ -140,15 +140,20 @@ namespace SistemaDeMensajeria
             }
             while (!(envios.IndexOf(nroIngresado) != -1) || esNumeroValido == false);
 
+           
             return nroIngresado;
+
         }
 
         public static void lineChanger(string newText, string fileName, int line_to_edit)
         {
+            
             string[] arrLine = File.ReadAllLines(fileName);
             arrLine[line_to_edit - 1] = newText;
             File.WriteAllLines(fileName, arrLine);
         }
+
+       
     }
 }
 

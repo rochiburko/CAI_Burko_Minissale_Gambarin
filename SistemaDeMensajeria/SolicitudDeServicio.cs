@@ -20,7 +20,7 @@ namespace SistemaDeMensajeria
             peso = Utils.solicitarPeso();
             Console.Clear();
 
-            //RAPIDEZ DE ENVIO
+            //PRIORIDAD DE ENVIO
             Console.WriteLine("INGRESE LA PRIORIDAD DE SU PEDIDO, si es NORMAL o URGENTE");
             Console.WriteLine("1 - Normal");
             Console.WriteLine("2 - Urgente");

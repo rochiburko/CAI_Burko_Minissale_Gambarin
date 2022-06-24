@@ -121,10 +121,9 @@
 
                 lineToEdit++;
             }
-
-            Utils.lineChanger($"{usuario};{direccion};{idEnvios}|{numeroSeguimientoNuevoEnvio}", archivoDatosClientes, lineToEdit);
-
             stream.Close();
+            Utils.lineChanger($"{usuario};{direccion};{idEnvios}|{numeroSeguimientoNuevoEnvio}", archivoDatosClientes, lineToEdit);
+            
         }
 
         public void consultarEnvio()
@@ -156,7 +155,7 @@
             costo = peso * 100;
             if (this.prioridad == "URGENTE")
             {
-                costo = costo * 0.3;
+                costo = costo * 1.3;
             }
         }
 

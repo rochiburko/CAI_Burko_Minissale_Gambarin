@@ -1,0 +1,7 @@
+1;1234;Rosario Burko;39988123;rosarioburko@gmail.com;Edison 354;Buenos Aires;San Isidro;Encomienda;Urgente;Nacional;Entregado en Sucursal
+2;Sofia Minissale;39960000;sofiam@gmail.com;Bolívar 1147;CABA;San Telmo;C1066;Encomienda;Normal;Internacional;Pendiente de Envio
+3;Nicolas Perez;245678231;nicolas@gmail.com;Rómulo Noya 1059;Buenos Aires;Zárate;B2800;Encomienda;Normal;En transito 
+4;Lucas Fernandez;218987414;lucas@gmail.com;Thames 380;CABA;Villa Crespo;C1414;Correspondencia;Internacional;Listo para retirar
+5;Roberto Sanchez;2196854785;robert@gmail.com;Avelino Palacios 2464;Buenos Aires;Morón;B1712;Correspondencia;Nacional;Listo para retirar
+
+
