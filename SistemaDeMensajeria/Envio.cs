@@ -6,8 +6,8 @@
         public string estado { get; set; }
         public string nombreUsuario { get; set; }
         public double peso { get; set; } 
-        public string sucursalOrigen { get; set; }
-        public string sucursalDestino { get; set; }
+        public Sucursal sucursalOrigen { get; set; }
+        public Sucursal sucursalDestino { get; set; }
         public int documentoReceptor { get; set; }
         public string prioridad { get; set; }
         public string correoElectronicoReceptor { get; set; }
@@ -17,7 +17,7 @@
         private string archivoDatosEnvios = "../../datos/envios.txt";
         private string archivoDatosClientes = @"../../datos/Cliente.txt";
 
-        public Envio(string estado, string nombreUsuario, double peso, string sucursalOrigen, string sucursalDestino, int documentoReceptor)
+        public Envio(string estado, string nombreUsuario, double peso, Sucursal sucursalOrigen, Sucursal sucursalDestino, int documentoReceptor)
         {
             this.estado = estado;
             this.nombreUsuario = nombreUsuario;

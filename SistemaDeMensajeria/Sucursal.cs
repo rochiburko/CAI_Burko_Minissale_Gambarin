@@ -2,6 +2,8 @@
 {
     public class Sucursal
     {
+        public string nacion;
+        public string pais;
         public string region;
         public string localidad;
         public string provincia;
@@ -10,6 +12,14 @@
 
         public Sucursal()
         {
+        }
+
+        public Sucursal(string nacion, string region, string localidad, string provincia)
+        {
+            this.nacion = nacion;
+            this.region = region;
+            this.localidad = localidad;
+            this.provincia = provincia;
         }
 
         public bool obtenerDatosDeSucursal(string localidad)

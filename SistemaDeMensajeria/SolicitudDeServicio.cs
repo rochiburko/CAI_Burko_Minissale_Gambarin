@@ -1,8 +1,8 @@
 ﻿using System;
 namespace SistemaDeMensajeria
 {
-	public static class SolicitudDeServicio
-	{
+    public static class SolicitudDeServicio
+    {
         private static string INGRESADO_EN_SISTEMA = "Ingresado en sistema";
 
         public static Envio cargarDatos(Cliente cliente)
@@ -11,7 +11,7 @@ namespace SistemaDeMensajeria
             double peso;
             string prioridadPedido = null;
             Sucursal sucursalOrigen = new Sucursal();
-            string sucursalDestino = null;
+            Sucursal sucursalDestino = new Sucursal();
 
             Console.WriteLine(" ");
 
@@ -101,17 +101,17 @@ namespace SistemaDeMensajeria
             return envio;
         }
 
-    }
+        public static void mostrarResumen(Envio envio, Cliente cliente)
+        {
+            Console.WriteLine("RESUMEN DE SU SOLICITUD");
+            Console.WriteLine($"Numero de seguimiento: {envio.numeroSeguimiento}");
+            Console.WriteLine($"El peso declarado es: {envio.peso}");
+            Console.WriteLine($"La sucursal de origen es: {envio.sucursalOrigen.localidad}");
+            Console.WriteLine($"La sucursal de destino es: {envio.sucursalDestino.localidad}");
+            Console.WriteLine($"El DNI del receptor es: {envio.documentoReceptor}");
+            Console.WriteLine($"El costo del envio es ${envio.costo}");
+            Console.WriteLine(" ");
+        }
 
-    public static void mostrarResumen(Envio envio, Cliente cliente)
-    {
-        Console.WriteLine("RESUMEN DE SU SOLICITUD");
-        Console.WriteLine($"Numero de seguimiento: {envio.numeroSeguimiento}");
-        Console.WriteLine($"El peso declarado es: {envio.peso}");
-        Console.WriteLine($"La sucursal de origen es: {envio.sucursalOrigen.localidad}");
-        Console.WriteLine($"La sucursal de destino es: {envio.sucursalDestino.localidad}");
-        Console.WriteLine($"El DNI del receptor es: {envio.documentoReceptor}");
-        Console.WriteLine($"El costo del envio es ${envio.costo}");
-        Console.WriteLine(" ");
     }
 }
