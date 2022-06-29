@@ -8,3 +8,8 @@
 8;nicolasgambartin;Ingresado en sistema;10;Entre Rios;Formosa;30900800;1000
 9;rosarioburko;Ingresado en sistema;4;Chaco;Corrientes;95689775;400
 10;minissalesofia;Ingresado en sistema;23;La Rioja;Mendoza;40900369;2300
+11;rosarioburko;Ingresado en sistema;5;Ciudad de Buenos Aires;Jujuy;39961099;500
+12;rosarioburko;Ingresado en sistema;2;Ciudad de Buenos Aires;Catamarca;39961099;200
+13;rosarioburko;Ingresado en sistema;3;Ciudad de Buenos Aires;Ciudad de Buenos Aires;39961099;300
+14;rosarioburko;Ingresado en sistema;4;Ciudad de Buenos Aires;Catamarca;39961099;400
+15;rosarioburko;Ingresado en sistema;2;Ciudad de Buenos Aires;Catamarca;39961099;200
