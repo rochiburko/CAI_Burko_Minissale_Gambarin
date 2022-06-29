@@ -302,7 +302,7 @@ namespace SistemaDeMensajeria
             if (sucursalOrigen.nacion.Equals("Nacional"))
             {
                 //Region sucursal origen
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione region de origen");
+                Console.WriteLine("ORIGEN - Seleccione region de origen");
                 Sucursales.listarRegiones();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 5);
 
@@ -333,7 +333,7 @@ namespace SistemaDeMensajeria
             else
             {
                 //Pais de envio
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione pais de origen");
+                Console.WriteLine("ORIGEN - Seleccione pais de origen");
                 Sucursales.listarPaisesInternacional();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 6);
 
@@ -377,7 +377,7 @@ namespace SistemaDeMensajeria
             //Provincia sucursal origen
             if (sucursalOrigen.region.Equals("Centro"))
             {
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione provincia de origen");
+                Console.WriteLine("ORIGEN - Seleccione provincia de origen");
                 Sucursales.listarProvinciasCentro();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 7);
 
@@ -417,7 +417,7 @@ namespace SistemaDeMensajeria
 
             if (sucursalOrigen.region.Equals("Metropolitana"))
             {
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione provincia de origen");
+                Console.WriteLine("ORIGEN - Seleccione provincia de origen");
                 Sucursales.listarProvinciasMetropolitana();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
 
@@ -440,7 +440,7 @@ namespace SistemaDeMensajeria
 
             if (sucursalOrigen.region.Equals("Norte"))
             {
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione provincia de origen");
+                Console.WriteLine("ORIGEN - Seleccione provincia de origen");
                 Sucursales.listarProvinciasNorte();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 12);
 
@@ -499,7 +499,7 @@ namespace SistemaDeMensajeria
 
             if (sucursalOrigen.region.Equals("Sur"))
             {
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione provincia de origen");
+                Console.WriteLine("ORIGEN - Seleccione provincia de origen");
                 Sucursales.listarProvinciasSur();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 6);
 
@@ -542,7 +542,7 @@ namespace SistemaDeMensajeria
             // Localidad sucursal origen
             if (sucursalOrigen.provincia.Equals("Cordoba"))
             {
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione localidad de origen");
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesCordoba();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
 
@@ -565,7 +565,7 @@ namespace SistemaDeMensajeria
 
             if (sucursalOrigen.provincia.Equals("Entre Rios"))
             {
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione localidad de origen");
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesEntreRios();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
 
@@ -588,7 +588,7 @@ namespace SistemaDeMensajeria
 
             if (sucursalOrigen.provincia.Equals("La Pampa"))
             {
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione localidad de origen");
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesLaPampa();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
 
@@ -611,7 +611,7 @@ namespace SistemaDeMensajeria
 
             if (sucursalOrigen.provincia.Equals("Mendoza"))
             {
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione localidad de origen");
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesMendoza();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
 
@@ -634,7 +634,7 @@ namespace SistemaDeMensajeria
 
             if (sucursalOrigen.provincia.Equals("San Luis"))
             {
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione localidad de origen");
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesSanLuis();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
 
@@ -657,7 +657,7 @@ namespace SistemaDeMensajeria
 
             if (sucursalOrigen.provincia.Equals("Santa Fe"))
             {
-                Console.WriteLine("SUCURSAL ORIGEN - Seleccione localidad de origen");
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesSantaFe();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
 

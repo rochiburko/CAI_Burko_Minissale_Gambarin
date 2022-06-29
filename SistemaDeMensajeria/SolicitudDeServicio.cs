@@ -12,6 +12,8 @@ namespace SistemaDeMensajeria
             string prioridadPedido = null;
             Sucursal sucursalOrigen = new Sucursal();
             Sucursal sucursalDestino = new Sucursal();
+            Boolean esSucursalOrigen = false;
+            bool primerIntento = true;
 
             Console.WriteLine(" ");
 
@@ -38,8 +40,53 @@ namespace SistemaDeMensajeria
 
             Console.Clear();
 
-            //SUCURSAL ORIGEN
+            //ENVIO A DOMICILIO O A SUCURSAL
+            Console.WriteLine("Seleccione si el origen del envio es una sucursal o domicilio particular");
+            Console.WriteLine("1 - Domicilio particular");
+            Console.WriteLine("2 - Sucursal");
+            numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+            switch (numeroIngresado)
+            {
+                case 1:
+                    esSucursalOrigen = false;
+                    Console.Clear();
+                    break;
+                case 2:
+                    esSucursalOrigen = true;
+                    Console.Clear();
+                    break;
+                case 3:
+                    Console.Clear();
+                    MenuPrincipal.mostrar(cliente);
+                    break;
+            }
+
+            //ORIGEN
             Sucursales.cargarSucursalOrigen(cliente);
+
+            
+            //Si el origen es un domicilio particular
+            if (!esSucursalOrigen)
+            {
+                Console.WriteLine("Por favor indique la direccion (Calle y numeracion) por la que debemos pasar a retirar el paquete");
+                string direccion;
+                primerIntento = true;
+                do
+                {
+                    if (!primerIntento)
+                    {
+                        Console.WriteLine("Por favor, ingrese una direccion valida");
+                    }
+                    direccion = Console.ReadLine();
+                    primerIntento = false;
+                }
+                while (String.IsNullOrWhiteSpace(direccion));
+            }
+            Console.Clear();
+
+            // DESTINO-- > la clase quedo con el nombre de sucursales pero la vamos a usar tmb para domicilios particulares
+            //Sucursales.cargarSucursalOrigen(cliente);
 
             //CLIENTE RECEPTOR
             Console.WriteLine("DATOS DEL DESTINATARIO");
@@ -48,7 +95,7 @@ namespace SistemaDeMensajeria
             Console.WriteLine(" ");
             Console.WriteLine("INGRESE EL NOMBRE DEL DESTINATARIO");
             string nombreReceptor;
-            bool primerIntento = true;
+            primerIntento = true;
             do
             {
                 if (!primerIntento)
