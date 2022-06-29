@@ -1,3 +1,3 @@
-rosarioburko;Edison 354, Martinez, Buenos Aires;1|2|3|4|9|14|15
+rosarioburko;Edison 354, Martinez, Buenos Aires;1|2|3|4|9|14|15|16|17|18|19|20|21
 minissalesofia;Italia 100, Olivos, Buenos Aires;5|6|10
 nicolasgambartin;Yrigoyen 900, CABA;7|8

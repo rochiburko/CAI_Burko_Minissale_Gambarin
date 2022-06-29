@@ -13,3 +13,9 @@
 13;rosarioburko;Ingresado en sistema;3;Ciudad de Buenos Aires;Ciudad de Buenos Aires;39961099;300
 14;rosarioburko;Ingresado en sistema;4;Ciudad de Buenos Aires;Catamarca;39961099;400
 15;rosarioburko;Ingresado en sistema;2;Ciudad de Buenos Aires;Catamarca;39961099;200
+16;rosarioburko;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500
+17;rosarioburko;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500
+18;rosarioburko;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500
+19;rosarioburko;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;38861099;500
+20;rosarioburko;Ingresado en sistema;2;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;200
+21;rosarioburko;Ingresado en sistema;4;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;400

@@ -86,7 +86,7 @@ namespace SistemaDeMensajeria
             Console.Clear();
 
             // DESTINO-- > la clase quedo con el nombre de sucursales pero la vamos a usar tmb para domicilios particulares
-            //Sucursales.cargarSucursalOrigen(cliente);
+           Sucursales.cargarSucursalDestino(cliente);
 
             //CLIENTE RECEPTOR
             Console.WriteLine("DATOS DEL DESTINATARIO");
