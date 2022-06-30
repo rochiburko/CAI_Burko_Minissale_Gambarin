@@ -21,3 +21,4 @@
 21;rosarioburko;Ingresado en sistema;4;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;400
 22;rosarioburko;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500
 23;rosarioburko;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500
+24;rosarioburko;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500

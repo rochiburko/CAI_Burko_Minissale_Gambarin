@@ -27,7 +27,7 @@ namespace SistemaDeMensajeria
 
             foreach (var envio in envios)
             {
-                Console.WriteLine($"Envio con numero de seguimiento {envio}");
+                Console.WriteLine($"Envio con número de seguimiento {envio}");
             }
         }
 

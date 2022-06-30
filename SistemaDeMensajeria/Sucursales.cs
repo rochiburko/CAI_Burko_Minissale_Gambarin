@@ -290,6 +290,7 @@ namespace SistemaDeMensajeria
                     break;
                 case 2:
                     sucursalOrigen.nacion = "Internacional";
+
                     Console.Clear();
                     break;
                 case 3:
@@ -636,6 +637,418 @@ namespace SistemaDeMensajeria
                 }
             }
 
+
+            if (sucursalOrigen.provincia.Equals("Buenos Aires"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesBuenosAires();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Lanus";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "La Plata";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Misiones"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesMisiones();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Guarani";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Iguazu";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+
+            if (sucursalOrigen.provincia.Equals("CABA"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesCABA();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 2);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "CABA";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+
+
+            if (sucursalOrigen.provincia.Equals("Catamarca"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesCatamarca();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Andalgala";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Belen";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Chaco"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesChaco();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Bermejo";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Maipu";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Corrientes"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesCorrientes();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "San Martin";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Santo Tome";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Formosa"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesFormosa();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Formosa";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Matacos";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Jujuy"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesJujuy();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Ledesma";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Rinconada";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("La Rioja"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesLaRioja();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Famatina";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Independencia";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Salta"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesSalta();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Cachi";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Cafayate";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+
+            if (sucursalOrigen.provincia.Equals("San Juan"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesSanJuan();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Cachi";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Cafayate";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Santiago Del Estero"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesSantiagoDelEstero();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Aguirre";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Figueroa";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Tucuman"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesTucuman();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Cruz Alta";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Leales";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+
+            if (sucursalOrigen.provincia.Equals("Chubut"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesChubut();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Escalante";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Rawson";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Neuquen"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesNeuquen();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Zapala";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Minas";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Rio Negro"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesRioNegro();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "General Roca";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Bariloche";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Santa Cruz"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesSantaCruz();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Magallanes";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.localidad = "Rio Chico";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalOrigen.provincia.Equals("Tierra Del Fuego"))
+            {
+                Console.WriteLine("ORIGEN - Seleccione localidad de origen");
+                Sucursales.listarLocalidadesTierraDelFuego();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 2);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.localidad = "Tierra del fuego";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
             return sucursalOrigen;
 
         }
@@ -958,20 +1371,20 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Santa Fe"))
+            if (sucursalDestino.provincia.Equals("Buenos Aires"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
-                Sucursales.listarLocalidadesSantaFe();
+                Sucursales.listarLocalidadesBuenosAires();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
 
                 switch (numeroIngresado)
                 {
                     case 1:
-                        sucursalDestino.localidad = "Garay";
+                        sucursalDestino.localidad = "Lanus";
                         Console.Clear();
                         break;
                     case 2:
-                        sucursalDestino.localidad = "Rosario";
+                        sucursalDestino.localidad = "La Plata";
                         Console.Clear();
                         break;
                     case 3:
@@ -981,6 +1394,393 @@ namespace SistemaDeMensajeria
                 }
             }
 
+            if (sucursalDestino.provincia.Equals("Misiones"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesMisiones();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Guarani";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Iguazu";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+
+            if (sucursalDestino.provincia.Equals("CABA"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesCABA();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 2);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "CABA";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+
+
+            if (sucursalDestino.provincia.Equals("Catamarca"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesCatamarca();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Andalgala";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Belen";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Chaco"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesChaco();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Bermejo";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Maipu";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Corrientes"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesCorrientes();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "San Martin";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Santo Tome";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Formosa"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesFormosa();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Formosa";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Matacos";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Jujuy"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesJujuy();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Ledesma";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Rinconada";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("La Rioja"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesLaRioja();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Famatina";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Independencia";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Salta"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesSalta();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Cachi";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Cafayate";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+
+            if (sucursalDestino.provincia.Equals("San Juan"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesSanJuan();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Cachi";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Cafayate";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Santiago Del Estero"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesSantiagoDelEstero();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Aguirre";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Figueroa";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Tucuman"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesTucuman();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Cruz Alta";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Leales";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+
+            if (sucursalDestino.provincia.Equals("Chubut"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesChubut();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Escalante";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Rawson";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Neuquen"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesNeuquen();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Zapala";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Minas";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Rio Negro"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesRioNegro();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "General Roca";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Bariloche";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Santa Cruz"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesSantaCruz();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Magallanes";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.localidad = "Rio Chico";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+
+            if (sucursalDestino.provincia.Equals("Tierra Del Fuego"))
+            {
+                Console.WriteLine("DESTINO - Seleccione localidad de destino");
+                Sucursales.listarLocalidadesTierraDelFuego();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 2);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.localidad = "Tierra del fuego";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
             return sucursalDestino;
 
         }
