@@ -348,7 +348,7 @@
                 double adicional;
                 adicional = costo * 0.2;
 
-                //Tope $200
+                //Tope $2000
                 if (adicional > 2000)
                 {
                     adicional = 2000;
