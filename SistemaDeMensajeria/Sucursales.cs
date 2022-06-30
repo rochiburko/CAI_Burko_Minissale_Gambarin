@@ -1057,32 +1057,91 @@ namespace SistemaDeMensajeria
             Sucursal sucursalDestino = new Sucursal();
             int numeroIngresado = 0;
 
-            Console.WriteLine("DESTINO - Seleccione region de destino");
-            Sucursales.listarRegiones();
-            numeroIngresado = Utils.solcitarNumeroEntre(1, 5);
+           Console.WriteLine("Seleccione el tipo de envio");
+            Sucursales.listarTipoEnvio();
+            numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
 
-            switch (numeroIngresado)
+           switch (numeroIngresado)
             {
                 case 1:
-                    sucursalDestino.region = "Centro";
+                    sucursalDestino.nacion = "Nacional";
                     Console.Clear();
                     break;
                 case 2:
-                    sucursalDestino.region = "Metropolitana";
+                    sucursalDestino.nacion = "Internacional";
+
                     Console.Clear();
                     break;
                 case 3:
-                    sucursalDestino.region = "Norte";
-                    Console.Clear();
-                    break;
-                case 4:
-                    sucursalDestino.region = "Sur";
-                    Console.Clear();
-                    break;
-                case 5:
                     Console.Clear();
                     MenuPrincipal.mostrar(cliente);
                     break;
+            }
+
+            if (sucursalDestino.nacion.Equals("Nacional"))
+            {
+
+                Console.WriteLine("DESTINO - Seleccione region de destino");
+                Sucursales.listarRegiones();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 5);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.region = "Centro";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.region = "Metropolitana";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        sucursalDestino.region = "Norte";
+                        Console.Clear();
+                        break;
+                    case 4:
+                        sucursalDestino.region = "Sur";
+                        Console.Clear();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("DESTINO - Seleccione el pais de destino");
+                Sucursales.listarPaisesInternacional();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 6);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.pais = "Paises Limitrofes";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.pais = "Resto de America Latina";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        sucursalDestino.pais = "América del Norte";
+                        Console.Clear();
+                        break;
+                    case 4:
+                        sucursalDestino.pais = "Europa";
+                        Console.Clear();
+                        break;
+                    case 5:
+                        sucursalDestino.pais = "Asia";
+                        Console.Clear();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
             }
             
             //Provincia sucursal origen
