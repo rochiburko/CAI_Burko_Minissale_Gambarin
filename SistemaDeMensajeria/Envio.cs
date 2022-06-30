@@ -152,9 +152,23 @@
         }
 
         //Tarifas para calculo de costos
+        /* Datos caso de prueba
+                2kg
+                urgente
+                domicilio particular
+                centro
+                cordoba
+                general roca
+                italia 1430
+
+                sucursal
+                internacional
+                asia
+        */
+
         public void calcularCosto()
         {
-            if (origen.nacion.Equals("Nacional"))
+            if (destino.nacion.Equals("Nacional"))
             {
                 if (peso <= 0.5)
                 {
@@ -234,7 +248,7 @@
                 }
             }
 
-            else if (origen.nacion.Equals("Internacional"))
+            else if (destino.nacion.Equals("Internacional"))
             {
                 if (peso <= 0.5)
                 {
