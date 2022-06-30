@@ -185,6 +185,8 @@ namespace SistemaDeMensajeria
                 );
 
             envio.calcularCosto();
+            envio.calcularEnvioInternacional();
+            envio.calcularEnvioNacional();
             envio.asignarNumeroDeSeguimiento();
             envio.cargarEnvioEnTXTEnvios();
             envio.cargarEnvioEnTXTClientes(cliente.nombreUsuario, envio.numeroSeguimiento);

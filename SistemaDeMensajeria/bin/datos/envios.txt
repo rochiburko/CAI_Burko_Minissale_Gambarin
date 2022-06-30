@@ -24,3 +24,9 @@
 24;rosarioburko;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500
 25;minissalesofia;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500
 26;minissalesofia;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500
+27;minissalesofia;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500
+28;minissalesofia;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;500
+29;minissalesofia;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;2000
+30;minissalesofia;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;2000
+31;minissalesofia;Ingresado en sistema;5;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;2000
+32;minissalesofia;Ingresado en sistema;1;SistemaDeMensajeria.Sucursal;SistemaDeMensajeria.Sucursal;39961099;400

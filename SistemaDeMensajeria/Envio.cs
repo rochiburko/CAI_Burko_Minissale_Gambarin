@@ -157,7 +157,53 @@
             {
                 costo = costo * 1.3;
             }
+            if (sucursalDestino.nacion.Equals("INTERNACIONAL"))
+            {
+                costo = costo * 1.5;
+            }
         }
 
+        public void calcularEnvioInternacional()
+        {
+            costo = peso * 500;
+            if (sucursalDestino.nacion.Equals("INTERNACIONAL"))
+            {
+                costo = costo * 1.3;
+            }
+        }
+
+        public void calcularEnvioNacional()
+        {
+            costo = peso * 400;
+            if (sucursalDestino.nacion.Equals("NACION") && peso <10)
+            {
+                costo = costo * 1.1;
+            }
+        }
+
+        public void CalculoEnvioRegion(string region)
+        {
+            costo = peso * 100;
+            switch (region)
+            {
+                case "Centro":
+                    costo = 200;
+
+                    break;
+                case "Metropolitana":
+                    costo = costo * 0.1;
+
+                    break;
+                case "Norte":
+                    costo = costo * 0.15;
+                    break;
+                case "Sur":
+                    costo = costo * 0.20;
+                    break;
+                case "CABA":
+                    costo = 200;
+                    break;
+            }
+        }
     }
 }

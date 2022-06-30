@@ -1057,11 +1057,11 @@ namespace SistemaDeMensajeria
             Sucursal sucursalDestino = new Sucursal();
             int numeroIngresado = 0;
 
-            Console.WriteLine("Seleccione el tipo de envio");
+           Console.WriteLine("Seleccione el tipo de envio");
             Sucursales.listarTipoEnvio();
             numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
 
-            switch (numeroIngresado)
+           switch (numeroIngresado)
             {
                 case 1:
                     sucursalDestino.nacion = "Nacional";
