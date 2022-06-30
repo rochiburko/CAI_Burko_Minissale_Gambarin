@@ -165,7 +165,7 @@
 
         public void calcularEnvioInternacional()
         {
-            costo = peso * 500;
+            costo = peso * 100;
             if (sucursalDestino.nacion.Equals("INTERNACIONAL"))
             {
                 costo = costo * 1.3;
@@ -174,7 +174,7 @@
 
         public void calcularEnvioNacional()
         {
-            costo = peso * 400;
+            costo = peso * 100;
             if (sucursalDestino.nacion.Equals("NACION") && peso <10)
             {
                 costo = costo * 1.1;
