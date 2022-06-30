@@ -69,7 +69,7 @@ namespace SistemaDeMensajeria
             //Si el origen es un domicilio particular
             if (!esSucursalOrigen)
             {
-                Console.WriteLine("Por favor indique la direccion (Calle y numeracion) por la que debemos pasar a retirar el paquete");
+                Console.WriteLine("Por favor indique la direccion (Calle y numeración) por la que debemos pasar a retirar el paquete");
                 string direccion;
                 primerIntento = true;
                 do
@@ -86,7 +86,47 @@ namespace SistemaDeMensajeria
             Console.Clear();
 
             // DESTINO-- > la clase quedo con el nombre de sucursales pero la vamos a usar tmb para domicilios particulares
-           Sucursales.cargarSucursalDestino(cliente);
+            //ENVIO A DOMICILIO O A SUCURSAL
+            Console.WriteLine("Seleccione si el destino del envio es una sucursal o domicilio particular");
+            Console.WriteLine("1 - Domicilio particular");
+            Console.WriteLine("2 - Sucursal");
+            numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+            switch (numeroIngresado)
+            {
+                case 1:
+                    esSucursalOrigen = false;
+                    Console.Clear();
+                    break;
+                case 2:
+                    esSucursalOrigen = true;
+                    Console.Clear();
+                    break;
+                case 3:
+                    Console.Clear();
+                    MenuPrincipal.mostrar(cliente);
+                    break;
+            }
+            Sucursales.cargarSucursalDestino(cliente);
+
+            //Si el origen es un domicilio particular
+            if (!esSucursalOrigen)
+            {
+                Console.WriteLine("Por favor indique la direccion (Calle y numeración) del destinatario");
+                string direccion;
+                primerIntento = true;
+                do
+                {
+                    if (!primerIntento)
+                    {
+                        Console.WriteLine("Por favor, ingrese una direccion valida");
+                    }
+                    direccion = Console.ReadLine();
+                    primerIntento = false;
+                }
+                while (String.IsNullOrWhiteSpace(direccion));
+            }
+            Console.Clear();
 
             //CLIENTE RECEPTOR
             Console.WriteLine("DATOS DEL DESTINATARIO");

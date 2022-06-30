@@ -72,11 +72,11 @@ namespace SistemaDeMensajeria
         private static void listarPaisesInternacional()
         {
             Console.WriteLine(" ");
-            Console.WriteLine("1 - Brasil");
-            Console.WriteLine("2 - Bolivia");
-            Console.WriteLine("3 - Colombia");
-            Console.WriteLine("4 - Paraguay");
-            Console.WriteLine("5 - Uruguay");
+            Console.WriteLine("1 - Países Limitrofes");
+            Console.WriteLine("2 - Resto de America Latina");
+            Console.WriteLine("3 - América del Norte");
+            Console.WriteLine("4 - Europa");
+            Console.WriteLine("5 - Asia");
             Console.WriteLine("6 - Volver al menu principal");
         }
 
@@ -298,7 +298,7 @@ namespace SistemaDeMensajeria
                     break;
             }
 
-            if (sucursalOrigen.nacion.Equals("Nacional"))
+            if (sucursalOrigen.nacion.Equals("Nacional") || sucursalOrigen.nacion.Equals("Internacional"))
             {
                 //Region sucursal origen
                 Console.WriteLine("ORIGEN - Seleccione region de origen");
@@ -330,48 +330,7 @@ namespace SistemaDeMensajeria
                 }
             }
             else
-            {
-                //Pais de envio
-                Console.WriteLine("ORIGEN - Seleccione pais de origen");
-                Sucursales.listarPaisesInternacional();
-                numeroIngresado = Utils.solcitarNumeroEntre(1, 6);
-
-                Console.WriteLine("1 - Brasil");
-                Console.WriteLine("2 - Bolivia");
-                Console.WriteLine("3 - Colombia");
-                Console.WriteLine("4 - Paraguay");
-                Console.WriteLine("5 - Uruguay");
-                Console.WriteLine("6 - Volver al menu principal");
-
-
-                switch (numeroIngresado)
-                {
-                    case 1:
-                        sucursalOrigen.pais = "Brasil";
-                        Console.Clear();
-                        break;
-                    case 2:
-                        sucursalOrigen.pais = "Bolivia";
-                        Console.Clear();
-                        break;
-                    case 3:
-                        sucursalOrigen.pais = "Colombia";
-                        Console.Clear();
-                        break;
-                    case 4:
-                        sucursalOrigen.pais = "Paraguay";
-                        Console.Clear();
-                        break;
-                    case 5:
-                        sucursalOrigen.pais = "Uruguay";
-                        Console.Clear();
-                        break;
-                    case 6:
-                        Console.Clear();
-                        MenuPrincipal.mostrar(cliente);
-                        break;
-                }
-            }
+            {}
 
             //Provincia sucursal origen
             if (sucursalOrigen.region.Equals("Centro"))
