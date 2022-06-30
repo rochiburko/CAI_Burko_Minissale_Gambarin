@@ -176,6 +176,7 @@ namespace SistemaDeMensajeria
 
             string nombreUsuario = cliente.nombreUsuario;
             Envio envio = new Envio(
+                prioridadPedido,
                 INGRESADO_EN_SISTEMA,
                 nombreUsuario,
                 peso,
@@ -185,8 +186,6 @@ namespace SistemaDeMensajeria
                 );
 
             envio.calcularCosto();
-            envio.calcularEnvioInternacional();
-            envio.calcularEnvioNacional();
             envio.asignarNumeroDeSeguimiento();
             envio.cargarEnvioEnTXTEnvios();
             envio.cargarEnvioEnTXTClientes(cliente.nombreUsuario, envio.numeroSeguimiento);
@@ -197,26 +196,27 @@ namespace SistemaDeMensajeria
         public static void mostrarResumen(Envio envio, Cliente cliente)
         {
             Console.WriteLine("RESUMEN DE SU SOLICITUD");
+            Console.WriteLine($"La prioridad de su pedido es: {envio.prioridad}");
             Console.WriteLine($"Numero de seguimiento: {envio.numeroSeguimiento}");
             Console.WriteLine($"El peso declarado es: {envio.peso} kg");
             Console.WriteLine($"El DNI del receptor es: {envio.documentoReceptor}");
             Console.WriteLine($"El costo del envio es ${envio.costo}");
 
-            if (envio.sucursalOrigen.localidad == null)
+            if (envio.origen.localidad == null)
             {
-                Console.WriteLine($"La sucursal de origen es: {envio.sucursalOrigen.pais}");
+                Console.WriteLine($"La sucursal de origen es: {envio.origen.pais}");
             } else
             {
-                Console.WriteLine($"La sucursal de origen es: {envio.sucursalOrigen.provincia}, {envio.sucursalOrigen.localidad}");
+                Console.WriteLine($"La sucursal de origen es: {envio.origen.provincia}, {envio.origen.localidad}");
             }
 
-            if (envio.sucursalDestino.localidad == null)
+            if (envio.destino.localidad == null)
             {
-                Console.WriteLine($"La sucursal de destino es: {envio.sucursalDestino.pais}");
+                Console.WriteLine($"La sucursal de destino es: {envio.destino.pais}");
             }
             else
             {
-                Console.WriteLine($"La sucursal de destino es: {envio.sucursalDestino.provincia}, {envio.sucursalDestino.localidad}");
+                Console.WriteLine($"La sucursal de destino es: {envio.destino.provincia}, {envio.destino.localidad}");
             }
 
             Console.WriteLine(" ");

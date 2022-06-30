@@ -6,8 +6,8 @@
         public string estado { get; set; }
         public string nombreUsuario { get; set; }
         public double peso { get; set; } 
-        public Sucursal sucursalOrigen { get; set; }
-        public Sucursal sucursalDestino { get; set; }
+        public Sucursal origen { get; set; }
+        public Sucursal destino { get; set; }
         public int documentoReceptor { get; set; }
         public string prioridad { get; set; }
         public string correoElectronicoReceptor { get; set; }
@@ -17,13 +17,14 @@
         private string archivoDatosEnvios = "../../datos/envios.txt";
         private string archivoDatosClientes = @"../../datos/Cliente.txt";
 
-        public Envio(string estado, string nombreUsuario, double peso, Sucursal sucursalOrigen, Sucursal sucursalDestino, int documentoReceptor)
+        public Envio(string prioridad, string estado, string nombreUsuario, double peso, Sucursal origen, Sucursal destino, int documentoReceptor)
         {
+            this.prioridad = prioridad;
             this.estado = estado;
             this.nombreUsuario = nombreUsuario;
             this.peso = peso;
-            this.sucursalOrigen = sucursalOrigen;
-            this.sucursalDestino = sucursalDestino;
+            this.origen = origen;
+            this.destino = destino;
             this.documentoReceptor = documentoReceptor;
             
         }
@@ -82,8 +83,8 @@
                     + this.nombreUsuario + ";"
                     + this.estado + ";"
                     + this.peso + ";"
-                    + this.sucursalOrigen + ";"
-                    + this.sucursalDestino + ";"
+                    + this.origen + ";"
+                    + this.destino + ";"
                     + this.documentoReceptor + ";"
                     + this.costo);
 
@@ -150,60 +151,208 @@
             this.numeroSeguimiento = numeroSeguimiento + 1;
         }
 
+        //Tarifas para calculo de costos
         public void calcularCosto()
         {
-            costo = peso * 100;
-            if (this.prioridad == "URGENTE")
+            if (origen.nacion.Equals("Nacional"))
             {
-                costo = costo * 1.3;
+                if (peso <= 0.5)
+                {
+                    if (origen.localidad.Equals(destino.localidad))
+                    {
+                        costo = 200;
+                    }
+                    if (origen.provincia.Equals(destino.provincia))
+                    {
+                        costo = 400;
+                    }
+                    if (origen.region.Equals(destino.region))
+                    {
+                        costo = 600;
+                    }
+                    if (origen.nacion.Equals(destino.nacion))
+                    {
+                        costo = 800;
+                    }
+                }
+                if (peso <= 10)
+                {
+                    if (origen.localidad.Equals(destino.localidad))
+                    {
+                        costo = 1000;
+                    }
+                    if (origen.provincia.Equals(destino.provincia))
+                    {
+                        costo = 1200;
+                    }
+                    if (origen.region.Equals(destino.region))
+                    {
+                        costo = 1400;
+                    }
+                    if (origen.nacion.Equals(destino.nacion))
+                    {
+                        costo = 1600;
+                    }
+                }
+                if (peso <= 20)
+                {
+                    if (origen.localidad.Equals(destino.localidad))
+                    {
+                        costo = 1800;
+                    }
+                    if (origen.provincia.Equals(destino.provincia))
+                    {
+                        costo = 2000;
+                    }
+                    if (origen.region.Equals(destino.region))
+                    {
+                        costo = 2200;
+                    }
+                    if (origen.nacion.Equals(destino.nacion))
+                    {
+                        costo = 2400;
+                    }
+                }
+                if (peso <= 30)
+                {
+                    if (origen.localidad.Equals(destino.localidad))
+                    {
+                        costo = 2600;
+                    }
+                    if (origen.provincia.Equals(destino.provincia))
+                    {
+                        costo = 2800;
+                    }
+                    if (origen.region.Equals(destino.region))
+                    {
+                        costo = 3000;
+                    }
+                    if (origen.nacion.Equals(destino.nacion))
+                    {
+                        costo = 3200;
+                    }
+                }
             }
-            if (sucursalDestino.nacion.Equals("INTERNACIONAL"))
+
+            if (origen.nacion.Equals("Internacional"))
             {
-                costo = costo * 1.5;
+                if (peso <= 0.5)
+                {
+                    if (destino.pais.Equals("Paises Limitrofes"))
+                    {
+                        costo = 1000;
+                    }
+                    if (destino.pais.Equals("Resto de America Latina"))
+                    {
+                        costo = 2000;
+                    }
+                    if (destino.nacion.Equals("América del Norte"))
+                    {
+                        costo = 3000;
+                    }
+                    if (destino.pais.Equals("Europa"))
+                    {
+                        costo = 4000;
+                    }
+                    if (destino.pais.Equals("Asia"))
+                    {
+                        costo = 5000;
+                    }
+                }
+                if (peso <= 10)
+                {
+                    if (destino.pais.Equals("Paises Limitrofes"))
+                    {
+                        costo = 6000;
+                    }
+                    if (destino.pais.Equals("Resto de America Latina"))
+                    {
+                        costo = 7000;
+                    }
+                    if (destino.nacion.Equals("América del Norte"))
+                    {
+                        costo = 8000;
+                    }
+                    if (destino.pais.Equals("Europa"))
+                    {
+                        costo = 9000;
+                    }
+                    if (destino.pais.Equals("Asia"))
+                    {
+                        costo = 10000;
+                    }
+                }
+                if (peso <= 20)
+                {
+                    if (destino.pais.Equals("Paises Limitrofes"))
+                    {
+                        costo = 11000;
+                    }
+                    if (destino.pais.Equals("Resto de America Latina"))
+                    {
+                        costo = 12000;
+                    }
+                    if (destino.nacion.Equals("América del Norte"))
+                    {
+                        costo = 13000;
+                    }
+                    if (destino.pais.Equals("Europa"))
+                    {
+                        costo = 14000;
+                    }
+                    if (destino.pais.Equals("Asia"))
+                    {
+                        costo = 15000;
+                    }
+                }
+                if (peso <= 30)
+                {
+                    if (destino.pais.Equals("Paises Limitrofes"))
+                    {
+                        costo = 16000;
+                    }
+                    if (destino.pais.Equals("Resto de America Latina"))
+                    {
+                        costo = 17000;
+                    }
+                    if (destino.nacion.Equals("América del Norte"))
+                    {
+                        costo = 18000;
+                    }
+                    if (destino.pais.Equals("Europa"))
+                    {
+                        costo = 19000;
+                    }
+                    if (destino.pais.Equals("Asia"))
+                    {
+                        costo = 20000;
+                    }
+                }
             }
-        }
 
-        public void calcularEnvioInternacional()
-        {
-            costo = peso * 100;
-            if (sucursalDestino.nacion.Equals("INTERNACIONAL"))
+            if (prioridad.Equals("URGENTE")) { 
+                double adicional;
+                adicional = costo * 0.2;
+
+                //Tope $200
+                if (adicional > 2000)
+                {
+                    adicional = 2000;
+                }
+
+                costo += adicional;
+            }
+
+            if (origen.direccion != null)
             {
-                costo = costo * 1.3;
+                costo += 400;
             }
-        }
 
-        public void calcularEnvioNacional()
-        {
-            costo = peso * 100;
-            if (sucursalDestino.nacion.Equals("NACION") && peso <10)
+            if (destino.direccion != null)
             {
-                costo = costo * 1.1;
+                costo += 400;
             }
-        }
 
-        public void CalculoEnvioRegion(string region)
-        {
-            costo = peso * 100;
-            switch (region)
-            {
-                case "Centro":
-                    costo = 200;
-
-                    break;
-                case "Metropolitana":
-                    costo = costo * 0.1;
-
-                    break;
-                case "Norte":
-                    costo = costo * 0.15;
-                    break;
-                case "Sur":
-                    costo = costo * 0.20;
-                    break;
-                case "CABA":
-                    costo = 200;
-                    break;
-            }
         }
     }
 }
