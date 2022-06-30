@@ -319,7 +319,7 @@
                         costo = 15000;
                     }
                 }
-                if (peso <= 30)
+                else if (peso <= 30)
                 {
                     if (destino.pais.Equals("Paises Limitrofes"))
                     {
