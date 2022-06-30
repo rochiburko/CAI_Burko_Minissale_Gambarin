@@ -299,8 +299,7 @@ namespace SistemaDeMensajeria
                     break;
             }
 
-            if (sucursalOrigen.nacion.Equals("Nacional"))
-            {
+          
                 //Region sucursal origen
                 Console.WriteLine("ORIGEN - Seleccione region de origen");
                 Sucursales.listarRegiones();
@@ -329,41 +328,9 @@ namespace SistemaDeMensajeria
                         MenuPrincipal.mostrar(cliente);
                         break;
                 }
-            }
-            else
-            {
-                Console.WriteLine("ORIGEN - Seleccione el pais de origen");
-                Sucursales.listarPaisesInternacional();
-                numeroIngresado = Utils.solcitarNumeroEntre(1, 6);
-
-                switch (numeroIngresado)
-                {
-                    case 1:
-                        sucursalOrigen.region = "Paises Limitrofes";
-                        Console.Clear();
-                        break;
-                    case 2:
-                        sucursalOrigen.region = "Resto de America Latina";
-                        Console.Clear();
-                        break;
-                    case 3:
-                        sucursalOrigen.region = "América del Norte";
-                        Console.Clear();
-                        break;
-                    case 4:
-                        sucursalOrigen.region = "Europa";
-                        Console.Clear();
-                        break;
-                    case 5:
-                        sucursalOrigen.region = "Asia";
-                        Console.Clear();
-                        break;
-                    case 6:
-                        Console.Clear();
-                        MenuPrincipal.mostrar(cliente);
-                        break;
-                }
-            }
+            
+            
+            
 
             //Provincia sucursal origen
             if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.region.Equals("Centro"))
