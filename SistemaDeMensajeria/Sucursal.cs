@@ -8,6 +8,7 @@
         public string localidad;
         public string provincia;
         public string codigoPostal;
+        public string direccion; //Se usa solo para casos en los que se trata de un domicilio particular
         private string archivoDatosSucursales = "../../datos/sucursales.txt";
 
         public Sucursal()

@@ -299,7 +299,7 @@ namespace SistemaDeMensajeria
                     break;
             }
 
-            if (sucursalOrigen.nacion.Equals("Nacional") || sucursalOrigen.nacion.Equals("Internacional"))
+            if (sucursalOrigen.nacion.Equals("Nacional"))
             {
                 //Region sucursal origen
                 Console.WriteLine("ORIGEN - Seleccione region de origen");
@@ -331,10 +331,42 @@ namespace SistemaDeMensajeria
                 }
             }
             else
-            {}
+            {
+                Console.WriteLine("ORIGEN - Seleccione el pais de origen");
+                Sucursales.listarPaisesInternacional();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 6);
+
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalOrigen.region = "Paises Limitrofes";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalOrigen.region = "Resto de America Latina";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        sucursalOrigen.region = "América del Norte";
+                        Console.Clear();
+                        break;
+                    case 4:
+                        sucursalOrigen.region = "Europa";
+                        Console.Clear();
+                        break;
+                    case 5:
+                        sucursalOrigen.region = "Asia";
+                        Console.Clear();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
 
             //Provincia sucursal origen
-            if (sucursalOrigen.region.Equals("Centro"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.region.Equals("Centro"))
             {
                 Console.WriteLine("ORIGEN - Seleccione provincia de origen");
                 Sucursales.listarProvinciasCentro();
@@ -374,7 +406,7 @@ namespace SistemaDeMensajeria
 
             }
 
-            if (sucursalOrigen.region.Equals("Metropolitana"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.region.Equals("Metropolitana"))
             {
                 Console.WriteLine("ORIGEN - Seleccione provincia de origen");
                 Sucursales.listarProvinciasMetropolitana();
@@ -397,7 +429,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.region.Equals("Norte"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.region.Equals("Norte"))
             {
                 Console.WriteLine("ORIGEN - Seleccione provincia de origen");
                 Sucursales.listarProvinciasNorte();
@@ -456,7 +488,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.region.Equals("Sur"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.region.Equals("Sur"))
             {
                 Console.WriteLine("ORIGEN - Seleccione provincia de origen");
                 Sucursales.listarProvinciasSur();
@@ -499,7 +531,7 @@ namespace SistemaDeMensajeria
             }
 
             // Localidad sucursal origen
-            if (sucursalOrigen.provincia.Equals("Cordoba"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Cordoba"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesCordoba();
@@ -522,7 +554,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Entre Rios"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Entre Rios"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesEntreRios();
@@ -545,7 +577,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("La Pampa"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("La Pampa"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesLaPampa();
@@ -568,7 +600,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Mendoza"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Mendoza"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesMendoza();
@@ -591,7 +623,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("San Luis"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("San Luis"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesSanLuis();
@@ -614,7 +646,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Santa Fe"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Santa Fe"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesSantaFe();
@@ -638,7 +670,7 @@ namespace SistemaDeMensajeria
             }
 
 
-            if (sucursalOrigen.provincia.Equals("Buenos Aires"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Buenos Aires"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesBuenosAires();
@@ -661,7 +693,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Misiones"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Misiones"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesMisiones();
@@ -685,7 +717,7 @@ namespace SistemaDeMensajeria
             }
 
 
-            if (sucursalOrigen.provincia.Equals("CABA"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("CABA"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesCABA();
@@ -706,7 +738,7 @@ namespace SistemaDeMensajeria
 
 
 
-            if (sucursalOrigen.provincia.Equals("Catamarca"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Catamarca"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesCatamarca();
@@ -729,7 +761,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Chaco"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Chaco"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesChaco();
@@ -752,7 +784,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Corrientes"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Corrientes"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesCorrientes();
@@ -775,7 +807,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Formosa"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Formosa"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesFormosa();
@@ -798,7 +830,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Jujuy"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Jujuy"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesJujuy();
@@ -821,7 +853,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("La Rioja"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("La Rioja"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesLaRioja();
@@ -844,7 +876,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Salta"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Salta"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesSalta();
@@ -868,7 +900,7 @@ namespace SistemaDeMensajeria
             }
 
 
-            if (sucursalOrigen.provincia.Equals("San Juan"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("San Juan"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesSanJuan();
@@ -891,7 +923,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Santiago Del Estero"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Santiago Del Estero"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesSantiagoDelEstero();
@@ -914,7 +946,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Tucuman"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Tucuman"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesTucuman();
@@ -938,7 +970,7 @@ namespace SistemaDeMensajeria
             }
 
 
-            if (sucursalOrigen.provincia.Equals("Chubut"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Chubut"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesChubut();
@@ -961,7 +993,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Neuquen"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Neuquen"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesNeuquen();
@@ -984,7 +1016,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Rio Negro"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Rio Negro"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesRioNegro();
@@ -1007,7 +1039,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Santa Cruz"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Santa Cruz"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesSantaCruz();
@@ -1030,7 +1062,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalOrigen.provincia.Equals("Tierra Del Fuego"))
+            if (sucursalOrigen.nacion.Equals("Nacional") && sucursalOrigen.provincia.Equals("Tierra Del Fuego"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de origen");
                 Sucursales.listarLocalidadesTierraDelFuego();
@@ -1058,8 +1090,30 @@ namespace SistemaDeMensajeria
             Sucursal sucursalDestino = new Sucursal();
             int numeroIngresado = 0;
 
-            
-                //Region sucursal origen
+            Console.WriteLine("Seleccione el tipo de envio");
+            Sucursales.listarTipoEnvio();
+            numeroIngresado = Utils.solcitarNumeroEntre(1, 3);
+
+            switch (numeroIngresado)
+            {
+                case 1:
+                    sucursalDestino.nacion = "Nacional";
+                    Console.Clear();
+                    break;
+                case 2:
+                    sucursalDestino.nacion = "Internacional";
+
+                    Console.Clear();
+                    break;
+                case 3:
+                    Console.Clear();
+                    MenuPrincipal.mostrar(cliente);
+                    break;
+            }
+
+            if (sucursalDestino.nacion.Equals("Nacional"))
+            {
+
                 Console.WriteLine("DESTINO - Seleccione region de destino");
                 Sucursales.listarRegiones();
                 numeroIngresado = Utils.solcitarNumeroEntre(1, 5);
@@ -1087,11 +1141,44 @@ namespace SistemaDeMensajeria
                         MenuPrincipal.mostrar(cliente);
                         break;
                 }
-            
-            
+            }
+            else
+            {
+                Console.WriteLine("DESTINO - Seleccione el pais de destino");
+                Sucursales.listarPaisesInternacional();
+                numeroIngresado = Utils.solcitarNumeroEntre(1, 6);
 
+                switch (numeroIngresado)
+                {
+                    case 1:
+                        sucursalDestino.pais = "Paises Limitrofes";
+                        Console.Clear();
+                        break;
+                    case 2:
+                        sucursalDestino.pais = "Resto de America Latina";
+                        Console.Clear();
+                        break;
+                    case 3:
+                        sucursalDestino.pais = "América del Norte";
+                        Console.Clear();
+                        break;
+                    case 4:
+                        sucursalDestino.pais = "Europa";
+                        Console.Clear();
+                        break;
+                    case 5:
+                        sucursalDestino.pais = "Asia";
+                        Console.Clear();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        MenuPrincipal.mostrar(cliente);
+                        break;
+                }
+            }
+            
             //Provincia sucursal origen
-            if (sucursalDestino.region.Equals("Centro"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.region.Equals("Centro"))
             {
                 Console.WriteLine("DESTINO - Seleccione provincia de destino");
                 Sucursales.listarProvinciasCentro();
@@ -1131,7 +1218,7 @@ namespace SistemaDeMensajeria
 
             }
 
-            if (sucursalDestino.region.Equals("Metropolitana"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.region.Equals("Metropolitana"))
             {
                 Console.WriteLine("DESTINO - Seleccione provincia de destino");
                 Sucursales.listarProvinciasMetropolitana();
@@ -1154,7 +1241,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.region.Equals("Norte"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.region.Equals("Norte"))
             {
                 Console.WriteLine("DESTINO - Seleccione provincia de destino");
                 Sucursales.listarProvinciasNorte();
@@ -1213,7 +1300,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.region.Equals("Sur"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.region.Equals("Sur"))
             {
                 Console.WriteLine("DESTINO - Seleccione provincia de destino");
                 Sucursales.listarProvinciasSur();
@@ -1255,8 +1342,8 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            // Localidad sucursal origen
-            if (sucursalDestino.provincia.Equals("Cordoba"))
+            // Localidad sucursal destino
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Cordoba"))
             {
                 Console.WriteLine("ORIGEN - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesCordoba();
@@ -1279,7 +1366,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Entre Rios"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Entre Rios"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesEntreRios();
@@ -1302,7 +1389,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("La Pampa"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("La Pampa"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesLaPampa();
@@ -1325,7 +1412,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Mendoza"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Mendoza"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesMendoza();
@@ -1348,7 +1435,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("San Luis"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("San Luis"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesSanLuis();
@@ -1371,7 +1458,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Buenos Aires"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Buenos Aires"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesBuenosAires();
@@ -1394,7 +1481,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Misiones"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Misiones"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesMisiones();
@@ -1418,7 +1505,7 @@ namespace SistemaDeMensajeria
             }
 
 
-            if (sucursalDestino.provincia.Equals("CABA"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("CABA"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesCABA();
@@ -1439,7 +1526,7 @@ namespace SistemaDeMensajeria
 
 
 
-            if (sucursalDestino.provincia.Equals("Catamarca"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Catamarca"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesCatamarca();
@@ -1462,7 +1549,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Chaco"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Chaco"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesChaco();
@@ -1485,7 +1572,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Corrientes"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Corrientes"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesCorrientes();
@@ -1508,7 +1595,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Formosa"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Formosa"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesFormosa();
@@ -1531,7 +1618,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Jujuy"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Jujuy"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesJujuy();
@@ -1554,7 +1641,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("La Rioja"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("La Rioja"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesLaRioja();
@@ -1577,7 +1664,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Salta"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Salta"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesSalta();
@@ -1601,7 +1688,7 @@ namespace SistemaDeMensajeria
             }
 
 
-            if (sucursalDestino.provincia.Equals("San Juan"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("San Juan"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesSanJuan();
@@ -1624,7 +1711,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Santiago Del Estero"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Santiago Del Estero"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesSantiagoDelEstero();
@@ -1647,7 +1734,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Tucuman"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Tucuman"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesTucuman();
@@ -1671,7 +1758,7 @@ namespace SistemaDeMensajeria
             }
 
 
-            if (sucursalDestino.provincia.Equals("Chubut"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Chubut"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesChubut();
@@ -1694,7 +1781,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Neuquen"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Neuquen"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesNeuquen();
@@ -1717,7 +1804,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Rio Negro"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Rio Negro"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesRioNegro();
@@ -1740,7 +1827,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Santa Cruz"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Santa Cruz"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesSantaCruz();
@@ -1763,7 +1850,7 @@ namespace SistemaDeMensajeria
                 }
             }
 
-            if (sucursalDestino.provincia.Equals("Tierra Del Fuego"))
+            if (sucursalDestino.nacion.Equals("Nacional") && sucursalDestino.provincia.Equals("Tierra Del Fuego"))
             {
                 Console.WriteLine("DESTINO - Seleccione localidad de destino");
                 Sucursales.listarLocalidadesTierraDelFuego();
