@@ -196,7 +196,7 @@ namespace SistemaDeMensajeria
         {
             Console.WriteLine("RESUMEN DE SU SOLICITUD");
             Console.WriteLine($"Numero de seguimiento: {envio.numeroSeguimiento}");
-            Console.WriteLine($"El peso declarado es: {envio.peso}");
+            Console.WriteLine($"El peso declarado es: {envio.peso} kg");
             Console.WriteLine($"El DNI del receptor es: {envio.documentoReceptor}");
             Console.WriteLine($"El costo del envio es ${envio.costo}");
 
@@ -205,7 +205,7 @@ namespace SistemaDeMensajeria
                 Console.WriteLine($"La sucursal de origen es: {envio.sucursalOrigen.pais}");
             } else
             {
-                Console.WriteLine($"La sucursal de origen es: {envio.sucursalOrigen.localidad}");
+                Console.WriteLine($"La sucursal de origen es: {envio.sucursalOrigen.provincia}, {envio.sucursalOrigen.localidad}");
             }
 
             if (envio.sucursalDestino.localidad == null)
@@ -214,7 +214,7 @@ namespace SistemaDeMensajeria
             }
             else
             {
-                Console.WriteLine($"La sucursal de destino es: {envio.sucursalDestino.localidad}");
+                Console.WriteLine($"La sucursal de destino es: {envio.sucursalDestino.provincia}, {envio.sucursalDestino.localidad}");
             }
 
             Console.WriteLine(" ");
