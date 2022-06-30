@@ -162,79 +162,79 @@
                     {
                         costo = 200;
                     }
-                    if (origen.provincia.Equals(destino.provincia))
+                    else if (origen.provincia.Equals(destino.provincia))
                     {
                         costo = 400;
                     }
-                    if (origen.region.Equals(destino.region))
+                    else if (origen.region.Equals(destino.region))
                     {
                         costo = 600;
                     }
-                    if (origen.nacion.Equals(destino.nacion))
+                    else if (origen.nacion.Equals(destino.nacion))
                     {
                         costo = 800;
                     }
                 }
-                if (peso <= 10)
+                else if (peso <= 10)
                 {
                     if (origen.localidad.Equals(destino.localidad))
                     {
                         costo = 1000;
                     }
-                    if (origen.provincia.Equals(destino.provincia))
+                    else if (origen.provincia.Equals(destino.provincia))
                     {
                         costo = 1200;
                     }
-                    if (origen.region.Equals(destino.region))
+                    else if (origen.region.Equals(destino.region))
                     {
                         costo = 1400;
                     }
-                    if (origen.nacion.Equals(destino.nacion))
+                    else if (origen.nacion.Equals(destino.nacion))
                     {
                         costo = 1600;
                     }
                 }
-                if (peso <= 20)
+                else if (peso <= 20)
                 {
                     if (origen.localidad.Equals(destino.localidad))
                     {
                         costo = 1800;
                     }
-                    if (origen.provincia.Equals(destino.provincia))
+                    else if (origen.provincia.Equals(destino.provincia))
                     {
                         costo = 2000;
                     }
-                    if (origen.region.Equals(destino.region))
+                    else if (origen.region.Equals(destino.region))
                     {
                         costo = 2200;
                     }
-                    if (origen.nacion.Equals(destino.nacion))
+                    else if (origen.nacion.Equals(destino.nacion))
                     {
                         costo = 2400;
                     }
                 }
-                if (peso <= 30)
+                else if (peso <= 30)
                 {
                     if (origen.localidad.Equals(destino.localidad))
                     {
                         costo = 2600;
                     }
-                    if (origen.provincia.Equals(destino.provincia))
+                    else if (origen.provincia.Equals(destino.provincia))
                     {
                         costo = 2800;
                     }
-                    if (origen.region.Equals(destino.region))
+                    else if (origen.region.Equals(destino.region))
                     {
                         costo = 3000;
                     }
-                    if (origen.nacion.Equals(destino.nacion))
+                    else if (origen.nacion.Equals(destino.nacion))
                     {
                         costo = 3200;
                     }
                 }
             }
 
-            if (origen.nacion.Equals("Internacional"))
+            else if (origen.nacion.Equals("Internacional"))
             {
                 if (peso <= 0.5)
                 {
@@ -242,65 +242,65 @@
                     {
                         costo = 1000;
                     }
-                    if (destino.pais.Equals("Resto de America Latina"))
+                    else if (destino.pais.Equals("Resto de America Latina"))
                     {
                         costo = 2000;
                     }
-                    if (destino.nacion.Equals("América del Norte"))
+                    else if (destino.nacion.Equals("América del Norte"))
                     {
                         costo = 3000;
                     }
-                    if (destino.pais.Equals("Europa"))
+                    else if (destino.pais.Equals("Europa"))
                     {
                         costo = 4000;
                     }
-                    if (destino.pais.Equals("Asia"))
+                    else if (destino.pais.Equals("Asia"))
                     {
                         costo = 5000;
                     }
                 }
-                if (peso <= 10)
+                else if (peso <= 10)
                 {
                     if (destino.pais.Equals("Paises Limitrofes"))
                     {
                         costo = 6000;
                     }
-                    if (destino.pais.Equals("Resto de America Latina"))
+                    else if (destino.pais.Equals("Resto de America Latina"))
                     {
                         costo = 7000;
                     }
-                    if (destino.nacion.Equals("América del Norte"))
+                    else if (destino.nacion.Equals("América del Norte"))
                     {
                         costo = 8000;
                     }
-                    if (destino.pais.Equals("Europa"))
+                    else if (destino.pais.Equals("Europa"))
                     {
                         costo = 9000;
                     }
-                    if (destino.pais.Equals("Asia"))
+                    else if (destino.pais.Equals("Asia"))
                     {
                         costo = 10000;
                     }
                 }
-                if (peso <= 20)
+                else if (peso <= 20)
                 {
                     if (destino.pais.Equals("Paises Limitrofes"))
                     {
                         costo = 11000;
                     }
-                    if (destino.pais.Equals("Resto de America Latina"))
+                    else if (destino.pais.Equals("Resto de America Latina"))
                     {
                         costo = 12000;
                     }
-                    if (destino.nacion.Equals("América del Norte"))
+                    else if (destino.nacion.Equals("América del Norte"))
                     {
                         costo = 13000;
                     }
-                    if (destino.pais.Equals("Europa"))
+                    else if (destino.pais.Equals("Europa"))
                     {
                         costo = 14000;
                     }
-                    if (destino.pais.Equals("Asia"))
+                    else if (destino.pais.Equals("Asia"))
                     {
                         costo = 15000;
                     }
@@ -311,19 +311,19 @@
                     {
                         costo = 16000;
                     }
-                    if (destino.pais.Equals("Resto de America Latina"))
+                    else if (destino.pais.Equals("Resto de America Latina"))
                     {
                         costo = 17000;
                     }
-                    if (destino.nacion.Equals("América del Norte"))
+                    else if (destino.nacion.Equals("América del Norte"))
                     {
                         costo = 18000;
                     }
-                    if (destino.pais.Equals("Europa"))
+                    else if (destino.pais.Equals("Europa"))
                     {
                         costo = 19000;
                     }
-                    if (destino.pais.Equals("Asia"))
+                    else if (destino.pais.Equals("Asia"))
                     {
                         costo = 20000;
                     }
